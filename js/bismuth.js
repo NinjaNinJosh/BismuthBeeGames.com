@@ -168,3 +168,38 @@ dropdowns.forEach(dropdown => {
  
 });
 
+/* Timeline Function */
+
+const initTimeline = () => {
+  const timelineBlocks = document.querySelectorAll(".cd-timeline-block");
+
+  if (!timelineBlocks.length) {
+    return;
+  }
+
+  const revealTimelineBlocks = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    const triggerTop = window.innerHeight * 0.15;
+
+    timelineBlocks.forEach((block) => {
+      const blockRect = block.getBoundingClientRect();
+      const blockTop = blockRect.top;
+      const blockBottom = blockRect.bottom;
+
+      if (blockTop < triggerBottom && blockBottom > triggerTop) {
+        block.classList.add("is-visible");
+      } else {
+        block.classList.remove("is-visible");
+      }
+    });
+  };
+
+  revealTimelineBlocks();
+  window.addEventListener("scroll", revealTimelineBlocks, { passive: true });
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initTimeline);
+} else {
+  initTimeline();
+}
