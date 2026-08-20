@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bismuth Bee Games - Games</title>
+  <link rel="stylesheet" href="../css/bismuth.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <div class="bg-black overflow-x-hidden">
+    <!-- BACKGROUND COMPONENTS -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      <div class="absolute top-20 left-10 w-96 h-96 bg-violet-900/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-80 h-80 bg-indigo-900/10 rounded-full blur-3xl"></div>
+      <div class="absolute top-40 right-20 w-64 h-64 bg-yellow-900/10 rounded-full blur-3xl"></div>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <script defer src="../js/bismuth.js"></script>
+      
+      <!-- 
+    
+      BACKGROUD HEXAGONS
+  
+      -->
+      <svg>
+        <pattern id="hexagons" width="69.2" height="60" patternUnits="userSpaceOnUse">
+          <path
+            d="M43.25 15.029 56.2 22.506V37.494L43.25 44.971 30.3 37.494V22.506ZM13-9H4.3V7.494L-9.969 15.733l4.35 7.534L8.65 15.029 21.6 22.506V37.494L8.65 44.971-5.619 36.733l-4.35 7.534L4.3 52.506V69H13V52.506l12.95-7.477L38.9 52.506V69h8.7V52.506l12.95-7.477 14.269 8.238 4.35-7.534L64.9 37.494V22.506l14.269-8.239-4.35-7.534L60.55 14.971 47.6 7.494V-9H38.9V7.494L25.95 14.971 13 7.494Z" />
+        </pattern>
+        <rect class="pat" style="fill:url(#hexagons)" />
+        <g id="container" />
+        <g id="hexagons" />
+      </svg>
+    </div>
+
+    <!-- 
+  
+    NAVIGATION SECTION
+    
+    -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-gray-900/70 backdrop-blur-lg border-b border-yellow-500/30 z-50 transition-all duration-300">
+      <div class="container mx-auto px-1 py-2">
+        <div class="flex items-center justify-between">
+          <!-- LOGO -->
+          <div class="flex items-center"><a href="../index.html" class="navbar-logo"><img src="../img/logo/Bee_Banner1k2.PNG" alt="Bismuth Bee Games"></a></div>
+
+          <!-- DESKTOP NAVIGATION -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="../index.html"class="nav-link text-violet-400 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Home</a>
+            <a href="../devlog/index.html"class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Devlog</a>
+
+            <div class="dropdown">
+              <div class="select color:--text-primary hover:--accent-400">
+                <span class="selected"><a href="index.html" class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Games</a></span>
+                <div class="caret"></div>
+              </div>
+              <ul class="menu">
+                <a href="bee-bomber.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Bee Bomber</li></a>
+                <a href="bombuszled.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Bombuszled</li></a>
+                <a href="bubblebee.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Bubble Bee</li></a>
+                <a href="chesterfield.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Chesterfield</li></a>
+                <a href="gone-big-mode.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Gone Big Mode</li></a>
+                <a href="maskotism.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Maskotism</li></a>
+                <a href="monster-manor.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Monster Manor</li></a>
+                <a href="ninjaninjosh-fury.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>NinjaNinJosh FURY</li></a>
+                <a href="not-a-drill.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Not a Drill</li></a>
+                <a href="orbituary.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Orbituary</li></a>
+                <a href="rootball.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Rootball</li></a>
+                <a href="shiprekt.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Shiprekt</li></a>
+              </ul>
+            </div>
+            <a href="../../about/timeline.html"><button class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Timeline</button></a>
+
+            <div class="relative ml-4 group">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-violet-800/50 to-indigo-600/50 rounded-lg blur opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
+              <a href="../../about/index.html">
+                <button class="contact-btn px-4 py-2 bg-gradient-to-r from-violet-900/90 to-indigo-900/90 rounded-lg text-white text-sm font-medium relative z-10 flex items-center justify-center gap-2 group-hover:from-violet-800/90 group-hover:to-indigo-800/90 transition-all duration-300">
+                  <span class="bg-gradient-to-r from-yellow-300 to-violet-300 bg-clip-text text-transparent">About</span>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <!-- MOBILE NAVIGATION BUTTON -->
+          <div class="flex md:hidden">
+            <button id="mobile-menu-button" class="relative w-10 h-10 focus:outline-none group" aria-label="Toggle menu">
+              <div class="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+                <span class="block h-0.5 w-5 bg-yellow-400 mb-1 transform transition duration-300 ease-in-out" id="line1"></span>
+                <span class="block h-0.5 w-5 bg-yellow-400 mb-1 transform transition duration-300 ease-in-out" id="line2"></span>
+                <span class="block h-0.5 w-5 bg-yellow-400 transform transition duration-300 ease-in-out" id="line3"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="pt-2 pb-4 space-y-1">
+            <a href="../index.html"><button class="mobile-nav-link block text-gray-300 hover:text-yellow-400 hover:bg-gray-800/50 px-4 py-2 rounded-md transition-colors duration-200">Home</button></a>
+            <a href="../devlog/index.html"><button class="mobile-nav-link block text-gray-300 hover:text-yellow-400 hover:bg-gray-800/50 px-4 py-2 rounded-md transition-colors duration-200">Devlog</button></a>
+            <a href="index.html"><button class="mobile-nav-link block text-gray-300 hover:text-yellow-400 hover:bg-gray-800/50 px-4 py-2 rounded-md transition-colors duration-200">Games</button></a>
+            <a href="../../about/timeline.html"><button class="mobile-nav-link block text-gray-300 hover:text-yellow-400 hover:bg-gray-800/50 px-4 py-2 rounded-md transition-colors duration-200">Timeline</button></a>
+            <div class="px-4 pt-2">
+              <a href="../../about/index.html"><button class="contact-btn w-full px-4 py-2 bg-gradient-to-r from-violet-900 to-indigo-700 rounded-lg text-white text-sm font-medium flex items-center justify-center gap-2 hover:from-violet-900 hover:to-indigo-600 transition-all duration-300">
+                  <span class="bg-gradient-to-r from-yellow-300 to-violet-800 bg-clip-text text-transparent">Contact</span>
+                </button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 
+    
+    HOME SECTION
+    
+    -->
+    <main>
+      <div class="flex flex-col items-center text-center py-20">
+          <div class="relative mb-4">
+            <div class="absolute inset-0 bg-yellow-500/20 rounded-full blur-3xl"></div>
+            <h1 class="text-1 md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-violet-800 via-indigo-600 to-purple-700 bg-clip-text text-transparent pb-2 relative">Games</h1>
+          </div>
+          <div class="flex flex-col items-center text-center relative">
+            <div class="max-w-5xl mx-auto">
+              <div class="text-center mb-12">
+                <div class="inline-block mb-3">
+                <div class="text-xs text-yellow-400 tracking-widest uppercase mb-1">The sweet nectar of our busy bees!
+                </div>
+                <a href="#games"><h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-800 to-indigo-600 bg-clip-text text-transparent">Upcoming Games</h1></a>
+              </div>
+              <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-violet-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+              <!-- ORBITUARY -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Orbituary</div>
+                    <p class="text-gray-200 mb-4">Cute corporeal comet cat cruelly causes cosmic chaos!</p>
+                    <a href="orbituary.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div class="flex-fill items-center justify-center"> <img src="../img/orbituary/orbituary0.06_beam-rain.png" alt="Orbituary Game Image of purple space cat flying through cosmic beams towards some asteroids"></div>
+              </div>
+
+              <!-- NINJANINJOSH FURY -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">NinjaNinJosh FURY</div>
+                    <p class="text-gray-200 mb-4">Nerdy negligent neurodivergent ninja nuisance needs numerous nefarious nemeses nixed!</p>
+                    <a href="nnjf.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div><img src="../img/nnjf/K-V-House-Below.png" alt="NinjaNinJosh FURY Game Image showing the front of NinjaNinJosh's house from below"></div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+
+
+      <!-- 
+      
+      JAMS SECTION
+      
+      -->
+      <section id="#jams" class="min-h-screen flex items-center relative py-20">
+        <div class="container mx-auto px-6">
+          <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+              <div class="inline-block mb-3">
+                <div class="text-xs text-yellow-400 tracking-widest uppercase mb-1">Game jams, backburner projects, and prototypes!</div>
+                <a href="jams"><h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-800 to-indigo-600 bg-clip-text text-transparent">Jam Games</h1></a>
+              </div>
+              <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-violet-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+              <!-- ROOTBALL -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Rootball</div>
+                    <p class="text-gray-200 mb-4">Rejoice! Really radical rootball's rotational rooting regulations revival rejuvinates raspberries!</p>
+                    <a href="rootball.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="../img/rootball/BigGarden1.png" alt="Rootball Game Image of a rootball covered in plants heading towards an unusual orchard of trees growing various fruits, vegetables, and sunflowers"></div>
+              </div>
+
+              <!-- BUBBLE BEE BATTLE -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Bubble Bee Battle!</div>
+                    <p class="text-gray-200 mb-4">Beautiful bubbly bee busy building bubble barriers, but beware bad bumbling bubble bubz!</p>
+                    <a href="bubble-bee.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="../img/bubble-bee/bubblebee5.png" alt="Bubble Bee Battle Game Image of several bubble bees flying around a meadow surrounded by mountains"></div>
+              </div>
+
+              <!-- GONE BIGMODE -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Gone Bigmode</div>
+                    <p class="text-gray-200 mb-4">Mad mutated mannequin modeled maniacally meets merciless murder mansion!</p>
+                    <a href="gone-bigmode.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="../img/gone-bigmode/haywheel-night1.jpg" alt="Gone Big Mode Game Image of Abomination standing near a floating hay wheel bathed in red light"></div>
+              </div>
+
+              <!-- MASKOTISM -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Maskotism</div>
+                    <p class="text-gray-200 mb-4">Masochistic multifarious mute misses merriment; makes morose misery meandering, masking, and minding mingling mannerisms at mixer</p>
+                    <a href="maskotism.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="../img/maskotism/party2.png" alt="Maskotism Game Image of a party with a DJ, lasers, and people dancing"></div>
+              </div>
+
+              <!-- BOMBUSZLED -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Bombuszled</div>
+                    <p class="text-gray-200 mb-4">Bonked bumble bee barely buzzes by bulging bombidae burrow!</p>
+                    <a href="bombuszled.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a></div>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="../img/bombuszled/forest2.png" alt="Bombuszled Game Image of a bumble bee flying in a forest."></div>
+              </div>
+
+              <!-- SHIPREKT -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Shiprekt</div>
+                    <p class="text-gray-200 mb-4">Such sad circumstances; spaceship smashed, stranded, scorned, seeking several screws!</p>
+                    <a href="shiprekt.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="../img/shiprekt/submerged-tower.png" alt="Shiprekt Game Image of a submerged tower and nearby bar."></div>
+              </div>
+
+              <!-- MONSTER MANOR MADNESS -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Monster Manor Madness</div>
+                    <p class="text-gray-200 mb-4">Madman makes money managing massive mansion messes, mostly made by many morphing monsters!</p>
+                    <a href="monster-manor.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="../img/monster-manor/AbominationFoyer.png" alt="Monster Manor Madness Game Image of a maid in a mansion's foyer, below a large statue of Abomination."></div>
+              </div>
+
+              <!-- CHESTERFIELD -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Chesterfield</div>
+                    <p class="text-gray-200 mb-4">Couch cushions consume compact computers, copious coins, and cascading cookie crumbs, creating caring conditions for crevice creatures!</p>
+                    <a href="chesterfield.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="../img/chesterfield/gnome1.png" alt="Chesterfield Game Image of a lint gnome in a chip bag home"></div>
+              </div>
+
+              <!-- NOT A DRILL -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Not a Drill</div>
+                    <p class="text-gray-200 mb-4">Dangerously destructive drilling doohickey doesn't dally in damaging domiciles and decimating defenses to detritous!</p>
+                    <a href="not-a-drill.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="../img/not-a-drill/drill-wall3.png" alt="Not a Drill Game Image of the drill blasting through a brick wall"></div>
+              </div>
+
+              <!-- BEE BOMBER -->
+              <div class="relative group overflow-hidden rounded-xl">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/80 to-violet-600/80 opacity-0 group-hover:opacity-90 transition-all duration-300 z-10 flex items-center justify-center">
+                  <div class="text-center p-4 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+                    <div class="text-xl font-medium text-white mb-2">Bee Bomber</div>
+                    <p class="text-gray-200 mb-4">Bees bombing big botanical borders bring back bountiful bundles!</p>
+                    <a href="bee-bomber.html"><button class="px-4 py-2 bg-white/20 backdrop-blur-sm rounded text-white hover:bg-white/30 transition-colors duration-300">View Details</button></a>
+                  </div>
+                </div>
+                <div class="aspect-video bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl overflow-hidden"><img class="w-full h-full object-cover" src="../img/bee-bomber/flyby2.png" alt="Bee Bomber Game Image drone flying past dandelions, carrying a beehive full of bees"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+      
+      CAROUSEL SECTION 
+      
+      -->
+      <section id="carousel" aria-label="Newest Photos">
+        <div class="carousel" data-carousel>
+          <button class="carousel-btn carousel-prev" data-carousel-button="prev" aria-label="Previous"></button>
+          <button class="carousel-btn carousel-next" data-carousel-button="next" aria-label="Next"></button>
+          <ul data-slides>
+            <li class="slide" data-active><img src="../img/bee-bomber/approach.png" alt="Drone approaching hive"></li>
+            <li class="slide"><img src="../img/bee-bomber/flyby1.png" alt="Drone flying past a dandelion"></li>
+            <li class="slide"><img src="../img/bee-bomber/bomb-high.png" alt="Drone observing explosion of bees below"></li>
+            <li class="slide"><img src="../img/bee-bomber/bomb-low.png" alt="Drone inside an explosion of bees"></li>
+            <li class="slide"><img src="../img/bee-bomber/over-house.png" alt="Drone carrying a hive full of bees over a house"></li>
+            <li class="slide"><img src="../img/bee-bomber/flyby2.png" alt="Drone flying past a dandelion"></li>
+            <li class="slide"><img src="../img/bee-bomber/carry.png" alt="Drone carrying a hive"></li>
+            <li class="slide"><img src="../img/bee-bomber/hive-row.png" alt="Row of hives on tables"></li>
+            
+            <li class="slide"><img src="../img/bombuszled/forest2.png" alt="A bee flying through the forest"></li>
+            <li class="slide"><img src="../img/bombuszled/melissera.png" alt="Walls of honeycomb hanging from an awning, surrounded by bees"></li>
+            <li class="slide"><img src="../img/bombuszled/insect-row.png" alt="A row of various bees and a blue butterfly"></li>
+            <li class="slide"><img src="../img/bombuszled/bike-rack.png" alt="A view from the grass of a forest across from a building"></li>
+            <li class="slide"><img src="../img/bombuszled/mandarinia.png" alt="A hornet's nest underneath a wooden tower"></li>
+            <li class="slide"><img src="../img/bombuszled/eaves-hall.png" alt="A long hallway covered by an awning"></li>
+            <li class="slide"><img src="../img/bombuszled/burrow.png" alt="Looking out from inside a bumblebee burrow"></li>
+
+            <li class="slide"><img src="../img/bubble-bee/bubblebee5.png" alt="A bubble bee surrounded by bubble bees"></li>
+            <li class="slide"><img src="../img/bubble-bee/bubblebee2.png" alt="A bubble bee flying in a meadow full of bubble bees"></li>
+            <li class="slide"><img src="../img/bubble-bee/bubblebee7.png" alt="A bubble bee being chased by other bubble bees"></li>
+            <li class="slide"><img src="../img/bubble-bee/bubblebee4.png" alt="A bubble bee being attacked by bubble bees on all sides"></li>
+            <li class="slide"><img src="../img/bubble-bee/bubblebee6.png" alt="A bubble bee being attacked from below by bubble bees"></li>
+            <li class="slide"><img src="../img/bubble-bee/bubblebee1.png" alt="A bubble bee flying in a meadow full of bubble bees"></li>
+            <li class="slide"><img src="../img/bubble-bee/bubblebee3.png" alt="A bubble bee flying in a meadow full of bubble bees"></li>
+
+            <li class="slide"><img src="../img/chesterfield/town2.png" alt="A juicebox village bustling with lint gnome residents and their giant pet fleas"></li>
+            <li class="slide"><img src="../img/chesterfield/flea1.png" alt="A giant flea preparing to jump"></li>
+            <li class="slide"><img src="../img/chesterfield/lake1.png" alt="A lake of energy drink filling the imprint of a butt"></li>
+            <li class="slide"><img src="../img/chesterfield/forest1.png" alt="A forest filled with lint trees at the edge of a juicebox village"></li>
+            <li class="slide"><img src="../img/chesterfield/gnome1.png" alt="A lint gnome in their chip bag home"></li>
+            <li class="slide"><img src="../img/chesterfield/cockroach.png" alt="A giant cockroach standing at the edge of a forest of lint trees"></li>
+            <li class="slide"><img src="../img/chesterfield/town1.png" alt="A view from the top of a lint tree overlooking the juicebox village"></li>
+            <li class="slide"><img src="../img/chesterfield/cans.png" alt="Cans and mold littered around a pool of spilled energy drink"></li>
+            <li class="slide"><img src="../img/chesterfield/dustmite.png" alt="Dustmite approaching from the forest"></li>
+            <li class="slide"><img src="../img/chesterfield/town3.png" alt="A bird's eye view of the juicebox village"></li>
+            <li class="slide"><img src="../img/chesterfield/popcorn.png" alt="A cluster of popcorn lying on the ground"></li>
+            <li class="slide"><img src="../img/chesterfield/lake2.png" alt="A lake of energy drink filling the imprint of a butt"></li>
+            <li class="slide"><img src="../img/chesterfield/drain.png" alt="A large plastic tube with energy drink draining down it"></li>
+
+            <li class="slide"><img src="../img/gone-bigmode/haywheel-night1.jpg" alt="Abomination in a spooky forest with a haywheel covered in Abominations behind him"></li>
+            <li class="slide"><img src="../img/gone-bigmode/mansion.jpg" alt="Abomination standing at the edge of a spooky forest in front of a mansion"></li>
+            <li class="slide"><img src="../img/gone-bigmode/haywheel-day1.jpg" alt="Abomination in a bright forest staring at a haywheel covered in smaller Abominations"></li>
+            <li class="slide"><img src="../img/gone-bigmode/dark-path.jpg" alt="Abomination on a spooky forest road"></li>
+            <li class="slide"><img src="../img/gone-bigmode/haywheel-day2.jpg" alt="Abomination in a bright forest staring at a haywheel covered in smaller Abominations"></li>
+            <li class="slide"><img src="../img/gone-bigmode/spawn.jpg" alt="Abomination walking down a road leading into a spooky forest"></li>
+            <li class="slide"><img src="../img/gone-bigmode/mansion2.jpg" alt="Abomination standing at the edge of a spooky forest in front of a mansion"></li>
+            <li class="slide"><img src="../img/gone-bigmode/haywheel-day3.jpg" alt="Abomination in a bright forest staring at a haywheel covered in smaller Abominations"></li>
+
+            <li class="slide"><img src="../img/maskotism/party1.png" alt="A party with a DJ, people dancing, and the main character awkwardly standing outside"></li>
+            <li class="slide"><img src="../img/maskotism/dudeski.png" alt="Character speaking to an NPC who says, 'Yeah, dude! You get it!'"></li>
+            <li class="slide"><img src="../img/maskotism/party2.png" alt="A party with a DJ, people dancing, and the main character awkwardly standing in the back"></li>
+            <li class="slide"><img src="../img/maskotism/chillman.png" alt="Character at a party, not matching the face of an NPC who says, 'You are making me quite uncomfortable... bro'"></li>
+            <li class="slide"><img src="../img/maskotism/autistic-embodiment.png" alt="Character in a room with discarded masks on the floor, speaking to an NPC who says, 'Hey! Do you wanna talke about trains, puzzles or dinos?'"></li>
+            <li class="slide"><img src="../img/maskotism/spacey.png" alt="Character in a room with discarded masks on the floor, speaking to an NPC who says, 'It's not even that I am sad for me, it's just unfair that no human will ever be able to visit the largest ultramassive black hole, TON-618'"></li>
+            
+            <li class="slide"><img src="../img/monster-manor/AbominationFoyer.png" alt="A large statue of Abomination overlooks a maid standing in the foyer of a mansion"></li>
+            <li class="slide"><img src="../img/monster-manor/Manor.png" alt="The front driveway leading to the manor"></li>
+            <li class="slide"><img src="../img/monster-manor/FrontFountain.png" alt="A large fountain in the front of the manor"></li>
+            <li class="slide"><img src="../img/monster-manor/Garden.png" alt="A beautiful garden behind the manor"></li>
+            <li class="slide"><img src="../img/monster-manor/Stairwell.png" alt="A stairwell leading to the basement of the manor"></li>
+
+            <li class="slide"><img src="../img/nnjf/K-V-House-Behind.png" alt="NinjaNinJosh's house from behind, looking towards the red sand cliff"></li>
+            <li class="slide"><img src="../img/nnjf/F-Sylvatica.png" alt="Looking up in a forest of trees"></li>
+            <li class="slide"><img src="../img/nnjf/K-V-House-Below.png" alt="The front of NinjaNinJosh's house viewed from below"></li>
+            <li class="slide"><img src="../img/nnjf/L-Burg-Back.png" alt="The back of a building in L-Burg"></li>
+            <li class="slide"><img src="../img/nnjf/K-V-FromCliff.png" alt="K-Village viewed from a red sand cliff"></li>
+            <li class="slide"><img src="../img/nnjf/K-V_Lake.png" alt="A lake viewed from the edge of a forest"></li>
+            <li class="slide"><img src="../img/nnjf/L-Burg-Alley.png" alt="An alley in L-Burg"></li>
+            <li class="slide"><img src="../img/nnjf/K-V-Above.png" alt="K-Village viewed from above"></li>
+            <li class="slide"><img src="../img/nnjf/Abomination-Swarm.png" alt="Young NinjaNinJosh surrounded by an army of Abominations"></li>
+            <li class="slide"><img src="../img/nnjf/L-Burg-Stairs.png" alt="Stairwell leading up a terrace in L-Burg"></li>
+            <li class="slide"><img src="../img/nnjf/K-V-WStrasse.png" alt="A street in K-Village"></li>
+            <li class="slide"><img src="../img/nnjf/L-Burg-Bridge1.png" alt="A bridge in L-Burg"></li>
+            <li class="slide"><img src="../img/nnjf/K-V-Lake2.png" alt="A lake at the base of a hill, viewed from the edge of a forest"></li>
+            <li class="slide"><img src="../img/nnjf/L-Burg-Front.png" alt="The front entry area of a L-Burg"></li>
+            <li class="slide"><img src="../img/nnjf/L-Burg-Bridge3.png" alt="A view from the top of L-Burg with Abominations patrolling below"></li>
+            <li class="slide"><img src="../img/nnjf/L-Burg-Forest.png" alt="L-Burg in the middle of a forest"></li>
+            <li class="slide"><img src="../img/nnjf/L-Burg-Bridge2.png" alt="A bridge in L-Burg with Abomination looking around"></li>
+            <li class="slide"><img src="../img/nnjf/K-V-Playground.png" alt="A playground in K-Village"></li>
+            <li class="slide"><img src="../img/nnjf/L-T.png" alt="A three-way split road in L-Town"></li>
+            <li class="slide"><img src="../img/nnjf/Cobble_Dumble.png" alt="Cobble and dumble brick textured pathway"></li>
+
+            <li class="slide"><img src="../img/not-a-drill/drill-bubblebee.png" alt="Bubblebee chasing the drill"></li>
+            <li class="slide"><img src="../img/not-a-drill/drill-wall1.png" alt="The drill drilling a brick wall"></li>
+            <li class="slide"><img src="../img/not-a-drill/drill-start.png" alt="The drill's starting area, instructions read 'Press F to pick up drill bit, press LMB to drill'"></li>
+            <li class="slide"><img src="../img/not-a-drill/drill-wall3.png" alt="The drill drilling a large split in a brick wall"></li>
+            <li class="slide"><img src="../img/not-a-drill/drill-run.png" alt="Drill rushing forward"></li>
+            <li class="slide"><img src="../img/not-a-drill/drill-wall2.png" alt="The drill next to a freshly damaged brick wall"></li>
+            <li class="slide"><img src="../img/not-a-drill/drill-jump.png" alt="The drill jumping as the world blurs behind it"></li>
+            <li class="slide"><img src="../img/not-a-drill/drill-wall4.png" alt="The drill drilling on top of a crumbling wall"></li>
+
+            <li class="slide"><img src="../img/orbituary/OrbituaryPromo.PNG" alt="Orbituary placeholder cover art"></li>
+            <li class="slide"><img src="../img/orbituary/orbituary0.06_beam-explosion.png" alt="Space cat shooting a beam, causing an asteroid to explode"></li>
+            <li class="slide"><img src="../img/orbituary/orbituary0.06_between.png" alt="Space cat flying between two asteroids"></li>
+            <li class="slide"><img src="../img/orbituary/orbituary0.06_speed.png" alt="Space cat enveloped in their expanded comet energy, causing nearby celestial objects to explode"></li>
+            <li class="slide"><img src="../img/orbituary/orbituary0.06_beams.png" alt="Space cat shooting beams at asteroids"></li>
+            <li class="slide"><img src="../img/orbituary/orbituary0.06_bursts.png" alt="Space cat flying towards exploding asteroids"></li>
+            <li class="slide"><img src="../img/orbituary/orbituary0.06_beam-rain.png" alt="Space cat flying near beams of light"></li>
+            <li class="slide"><img src="../img/orbituary/orbituary0.06_helix.png" alt="Space cat following their helix shot"></li>
+            <li class="slide"><img src="../img/orbituary/orbituary0.06_planet-break.png" alt="Space cat flying towards an exploding planet"></li>
+            <li class="slide"><img src="../img/orbituary/cat-tux.PNG" alt="Space cat's tuxedo outfit"></li>
+            <li class="slide"><img src="../img/orbituary/cat-construction.PNG" alt="Space cat's construction outfit"></li>
+            <li class="slide"><img src="../img/orbituary/cat-suit.PNG" alt="Space cat's business suit outfit"></li>
+            <li class="slide"><img src="../img/orbituary/cat-faith.PNG" alt="Space cat's Faith Connors cosplay"></li>
+
+            <li class="slide"><img src="../img/rootball/BigGarden1.png" alt="Rootball covered in plants, overlooking a huge orchard of trees that are growing fruits, vegetables, and sunflowers"></li>
+            <li class="slide"><img src="../img/rootball/Reservoir1.png" alt="A small pond reservoir with a couple trees growing from the center in the middle of a forest"></li>
+            <li class="slide"><img src="../img/rootball/Holes1.png" alt="Scattered fruits and vegetables near open holes, waiting to be planted"></li>
+            <li class="slide"><img src="../img/rootball/Forest1.png" alt="A low-poly forest viewed from the grass"></li>
+            <li class="slide"><img src="../img/rootball/Pickup5.png" alt="Rootball carrying fruits, vegetables, and sunflowers"></li>
+            <li class="slide"><img src="../img/rootball/Paths1.png" alt="A branching path in the forest"></li>
+            <li class="slide"><img src="../img/rootball/Snow1.png" alt="A snowy forest area"></li>
+            <li class="slide"><img src="../img/rootball/BigGarden2.png" alt="Rootball covered in plants, overlooking a huge orchard of trees that are growing fruits, vegetables, and sunflowers"></li>
+            <li class="slide"><img src="../img/rootball/Paths2.png" alt="A path through the forest"></li>
+            <li class="slide"><img src="../img/rootball/Reservoir2.png" alt="A path through the forest leading to the pond reservoir"></li>
+            <li class="slide"><img src="../img/rootball/Pickup1.png" alt="Early rootball carrying various fruits and vegetables"></li>
+            <li class="slide"><img src="../img/rootball/Pickup2.png" alt="Early rootball carrying various fruits and vegetables"></li>
+            <li class="slide"><img src="../img/rootball/Pickup3.png" alt="Early rootball carrying various fruits and vegetables"></li>
+            <li class="slide"><img src="../img/rootball/Pickup4.png" alt="Early rootball carrying various fruits and vegetables"></li>
+            <li class="slide"><img src="../img/rootball/FirstFoliage.png" alt="Early project image of when the trees and a small pond were first added to the map"></li>
+
+            <li class="slide"><img src="../img/shiprekt/spaceship.png" alt="A giant spaceship partially buried in a massive crater"></li>
+            <li class="slide"><img src="../img/shiprekt/submerged-tower.png" alt="A partially submerged tower and a speakeasy"></li>
+            <li class="slide"><img src="../img/shiprekt/bar.png" alt="The main area of the speakeasy"></li>
+            <li class="slide"><img src="../img/shiprekt/pyramid.png" alt="A huge pyramid that takes up the width of the frame, an entrance is visible at the base"></li>
+            <li class="slide"><img src="../img/shiprekt/maze-overview.png" alt="Overhead view of the maze inside the pyramid"></li>
+            <li class="slide"><img src="../img/shiprekt/attic.png" alt="A couple alien NPCs in the attic of a speakeasy, one is lying on the floor"></li>
+            <li class="slide"><img src="../img/shiprekt/city.png" alt="Alien city viewed from the edge"></li>
+            <li class="slide"><img src="../img/shiprekt/pre-shader-overview.png" alt="An overhead view of the entire map before the Art Deco shader was applied"></li>
+
+            <li class="slide"><img src="../img/team/pgc2022-table.png" alt="Salem, Kaspian, and Joshua standing at their table, showcasing Orbituary and other Bismuth Bee Games"></li>
+            <li class="slide"><img src="../img/team/pgc2022.png" alt="Kaspian, Joshua, and Salem at Pocket Gamer Connects 2022"></li>
+            <li class="slide"><img src="../img/team/pgc2022-masked.png" alt="Kaspian, Salem, and Joshua wearing masks in front of the Pocket Gamer Connects 2022 sign"></li>
+            <li class="slide"><img src="../img/team/pgc2022-unmasked.png" alt="Kaspian, Salem, and Joshua wearing masks in front of the Pocket Gamer Connects 2022 sign"></li>
+            <li class="slide"><img src="../img/team/chibi-joshua.png" alt="Chibi drawing of Joshua Graham"></li>
+            <li class="slide"><img src="../img/team/chibi-kaspian.png" alt="Chibi drawing of IconoClastGames"></li>
+            <li class="slide"><img src="../img/team/chibi-SalemX.png" alt="Chibi drawing of SalemX"></li>
+          </ul>
+        </div>
+      </section>
+
+      <!--
+
+        DEVLOG SECTION
+      
+      -->
+      <section id="devlog" class="min-h-screen flex items-center relative py-10">
+        <div class="container mx-auto px-6">
+          <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+              <div class="inline-block mb-3">
+                <div class="text-xs text-yellow-400 tracking-widest uppercase mb-1">Read stories and posts about our progress!</div>
+                <a href="../devlog/index.html"><h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-800 to-indigo-600 bg-clip-text text-transparent">Devlog</h1></a>
+              </div>
+              <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-violet-500 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+              
+              <!-- LOG #36: DEVELOPING BISMUTH BEE GAMES WEBSITE -->
+                  <div class="relative group">
+                    <div class="absolute inset-0 bg-violet-800/5 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity"></div>
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-violet-800/20 rounded-lg p-6 relative z-10 h-full group-hover:border-violet-800/40 transition-all duration-300">
+                      <div class="flex flex-col h-full">
+                        <div class="flex items-center mb-4">
+                          <div class="shrink-0 w-10 h-10 rounded bg-violet-800/60 flex items-center justify-center mr-3 group-hover:bg-violet-800/70 transition-colors">
+                            <img class="w-10 h-10 object-cover" src="../img/logo/Bee_Icon_800.PNG">
+                          </div>
+                          <div class="min-w-0 font-medium text-lg text-violet-600 group-hover:text-violet-400 transition-colors"><h2>Developing Bismuth Bee Games Website</h2></div>
+                        </div>
+                        <div class="font-medium text-lg text-cyan-600 group-hover:text-cyan-400 transition-colors text-left"><h2>Log #36</h2></div>
+                        <p class="text-gray-300 group-hover:text-gray-200 mb-4 text-left">A long overdue, custom designed website for Bismuth Bee Games is finally here!</p>
+                        <a href="../devlog/bbg-custom-website.html" class="mt-auto text-violet-500 hover:text-yellow-500 inline-flex items-center">Learn more<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- LOG #35: HEALTH CRISIS HIATUS -->
+                  <div class="relative group">
+                    <div class="absolute inset-0 bg-violet-800/5 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity"></div>
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-violet-800/20 rounded-lg p-6 relative z-10 h-full group-hover:border-violet-800/40 transition-all duration-300">
+                      <div class="flex flex-col h-full">
+                        <div class="flex items-center mb-4">
+                          <div class="shrink-0 w-10 h-10 rounded bg-violet-800/60 flex items-center justify-center mr-3 group-hover:bg-violet-800/70 transition-colors">
+                            <img class="w-10 h-10 object-cover" src="IMG">
+                          </div>
+                          <div class="min-w-0 font-medium text-lg text-violet-600 group-hover:text-violet-400 transition-colors"><h2>Health Crisis Hiatus</h2></div>
+                        </div>
+                        <div class="font-medium text-lg text-cyan-600 group-hover:text-cyan-400 transition-colors text-left"><h2>Log #35</h2></div>
+                        <p class="text-gray-300 group-hover:text-gray-200 mb-4 text-left">The story of Joshua Graham's sudden onset chronic health issues, his battle to get doctors to help, and how it has affected development delays.</p>
+                        <a href="../devlog/health-crisis.html" class="mt-auto text-violet-500 hover:text-yellow-500 inline-flex items-center">Learn more<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- LOG #34: MASKOTISM + TRAILER - GGJ / BMGJ 2026 -->
+                  <div class="relative group">
+                    <div class="absolute inset-0 bg-violet-800/5 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity"></div>
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-violet-800/20 rounded-lg p-6 relative z-10 h-full group-hover:border-violet-800/40 transition-all duration-300">
+                      <div class="flex flex-col h-full">
+                        <div class="flex items-center mb-4">
+                          <div class="shrink-0 w-10 h-10 rounded bg-violet-800/60 flex items-center justify-center mr-3 group-hover:bg-violet-800/70 transition-colors">
+                            <img class="w-10 h-10 object-cover" src="../img/maskotism/party1.png">
+                          </div>
+                          <div class="min-w-0 font-medium text-lg text-violet-600 group-hover:text-violet-400 transition-colors"><h2>Maskotism + Trailer - GGJ / BMGJ 2026</h2></div>
+                        </div>
+                        <div class="font-medium text-lg text-cyan-600 group-hover:text-cyan-400 transition-colors text-left"><h2>Log #34</h2></div>
+                        <p class="text-gray-300 group-hover:text-gray-200 mb-4 text-left">Joshua Graham partners with Roe Rocket to collaborate on developing Maskotism for Global and Bigmode Game Jam's 2026 respective themes: "Mask" and "Slick"</p>
+                        <a href="../devlog/maskotism-ggj26.html" class="mt-auto text-violet-500 hover:text-yellow-500 inline-flex items-center">Learn more<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- LOG #33: BISMUTH BEE MEDIA WEBSITE GOES DARK -->
+                  <div class="relative group">
+                    <div class="absolute inset-0 bg-violet-800/5 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity"></div>
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-violet-800/20 rounded-lg p-6 relative z-10 h-full group-hover:border-violet-800/40 transition-all duration-300">
+                      <div class="flex flex-col h-full">
+                        <div class="flex items-center mb-4">
+                          <div class="shrink-0 w-10 h-10 rounded bg-violet-800/60 flex items-center justify-center mr-3 group-hover:bg-violet-800/70 transition-colors">
+                            <img class="w-10 h-10 object-cover" src="../img/logo/Bee_Icon_800.PNG">
+                          </div>
+                          <div class="min-w-0 font-medium text-lg text-violet-600 group-hover:text-violet-400 transition-colors"><h2>Bismuth Bee Media Website Goes Dark</h2></div>
+                        </div>
+                        <div class="font-medium text-lg text-cyan-600 group-hover:text-cyan-400 transition-colors text-left"><h2>Log #33</h2></div>
+                        <p class="text-gray-300 group-hover:text-gray-200 mb-4 text-left">In an effort to rebrand as Bismuth Bee Games, Bismuth Bee Media's website gets shut down while the new site gets built from scratch.</p>
+                        <a href="../devlog/bbm-goes-dark.html" class="mt-auto text-violet-500 hover:text-yellow-500 inline-flex items-center">Learn more<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- LOG #32: NOT A DRILL - BMGJ25 -->
+                  <div class="relative group">
+                    <div class="absolute inset-0 bg-violet-800/5 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity"></div>
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-violet-800/20 rounded-lg p-6 relative z-10 h-full group-hover:border-violet-800/40 transition-all duration-300">
+                      <div class="flex flex-col h-full">
+                        <div class="flex items-center mb-4">
+                          <div class="shrink-0 w-10 h-10 rounded bg-violet-800/60 flex items-center justify-center mr-3 group-hover:bg-violet-800/70 transition-colors">
+                            <img class="w-10 h-10 object-cover" src="../img/not-a-drill/drill-jump.png">
+                          </div>
+                          <div class="min-w-0 font-medium text-lg text-violet-600 group-hover:text-violet-400 transition-colors"><h2>Not A Drill - Bigmode Game Jam 2025</h2></div>
+                        </div>
+                        <div class="font-medium text-lg text-cyan-600 group-hover:text-cyan-400 transition-colors text-left"><h2>Log #32</h2></div>
+                        <p class="text-gray-300 group-hover:text-gray-200 mb-4 text-left">The sad tale of time zones and upload failure during Bigmode Game Jam 2025.</p>
+                        <a href="../devlog/notadrill-bmgj25.html" class="mt-auto text-violet-500 hover:text-yellow-500 inline-flex items-center">Learn more<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- LOG #31: BUBBLE BEE BATTLE - GLOBAL GAME JAM 2025 -->
+                  <div class="relative group">
+                    <div class="absolute inset-0 bg-violet-800/5 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity"></div>
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-violet-800/20 rounded-lg p-6 relative z-10 h-full group-hover:border-violet-800/40 transition-all duration-300">
+                      <div class="flex flex-col h-full">
+                        <div class="flex items-center mb-4">
+                          <div class="shrink-0 w-10 h-10 rounded bg-violet-800/60 flex items-center justify-center mr-3 group-hover:bg-violet-800/70 transition-colors">
+                            <img class="w-10 h-10 object-cover" src="../img/bubble-bee/bubblebee4.png">
+                          </div>
+                          <div class="min-w-0 font-medium text-lg text-violet-600 group-hover:text-violet-400 transition-colors"><h2>Bubble Bee Battle - Global Game Jam 2025</h2></div>
+                        </div>
+                        <div class="font-medium text-lg text-cyan-600 group-hover:text-cyan-400 transition-colors text-left"><h2>Log #31</h2></div>
+                        <p class="text-gray-300 group-hover:text-gray-200 mb-4 text-left">Bismuth Bee builds Bubble Bee Battle for Blobal Bame Bam 2025!</p>
+                        <a href="../devlog/bubblebee-ggj25.html" class="mt-auto text-violet-500 hover:text-yellow-500 inline-flex items-center">Learn more<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+  
+      HEXAGON GALLERY SECTION
+
+      -->
+      <section id="hex-gallery" class="min-h-screen flex items-center relative py-20">
+        <div class="container mx-auto px-6">
+          <div class="max-w-5xl mx-auto text-center mb-12">
+            <div class="inline-block mb-3">
+              <div class="text-xs text-yellow-400 tracking-widest uppercase mb-1">Hive of creativity</div>
+              <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-violet-800 to-indigo-600 bg-clip-text text-transparent">HexaGallery</h1>
+            </div>
+            <div class="w-20 h-1 bg-gradient-to-r from-violet-800 to-indigo-500 mx-auto"></div>
+          </div>
+
+          <div class="hex-gallery">
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bee-bomber.html" data-title="Bee Bomber" style="--i: 0"><img src="../img/bee-bomber/approach.png" alt="Drone approaching hive"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bee-bomber.html" data-title="Bee Bomber" style="--i: 1"><img src="../img/bee-bomber/flyby1.png" alt="Drone flying past a dandelion"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bee-bomber.html" data-title="Bee Bomber" style="--i: 2"><img src="../img/bee-bomber/bomb-high.png" alt="Drone observing explosion of bees below"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bee-bomber.html" data-title="Bee Bomber" style="--i: 3"><img src="../img/bee-bomber/bomb-low.png" alt="Drone inside an explosion of bees"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bee-bomber.html" data-title="Bee Bomber" style="--i: 4"><img src="../img/bee-bomber/over-house.png" alt="Drone carrying a hive full of bees over a house"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bee-bomber.html" data-title="Bee Bomber" style="--i: 5"><img src="../img/bee-bomber/flyby2.png" alt="Drone flying past a dandelion"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bee-bomber.html" data-title="Bee Bomber" style="--i: 6"><img src="../img/bee-bomber/carry.png" alt="Drone carrying a hive"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bee-bomber.html" data-title="Bee Bomber" style="--i: 7"><img src="../img/bee-bomber/hive-row.png" alt="Row of hives on tables"></a>
+
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bombuszled.html" data-title="Bombuszled" style="--i: 8"><img src="../img/bombuszled/forest2.png" alt="A bee flying through the forest"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bombuszled.html" data-title="Bombuszled" style="--i: 9"><img src="../img/bombuszled/melissera.png" alt="Walls of honeycomb hanging from an awning, surrounded by bees"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bombuszled.html" data-title="Bombuszled" style="--i: 10"><img src="../img/bombuszled/insect-row.png" alt="A row of various bees and a blue butterfly"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bombuszled.html" data-title="Bombuszled" style="--i: 11"><img src="../img/bombuszled/bike-rack.png" alt="A view from the grass of a forest across from a building"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bombuszled.html" data-title="Bombuszled" style="--i: 12"><img src="../img/bombuszled/mandarinia.png" alt="A hornet's nest underneath a wooden tower"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bombuszled.html" data-title="Bombuszled" style="--i: 13"><img src="../img/bombuszled/eaves-hall.png" alt="A long hallway covered by an awning"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bombuszled.html" data-title="Bombuszled" style="--i: 14"><img src="../img/bombuszled/burrow.png" alt="Looking out from inside a bumblebee burrow"></a>
+
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bubble-bee.html" data-title="Bubble Bee Battle" style="--i: 15"><img src="../img/bubble-bee/bubblebee5.png" alt="A bubble bee surrounded by bubble bees"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bubble-bee.html" data-title="Bubble Bee Battle" style="--i: 16"><img src="../img/bubble-bee/bubblebee2.png" alt="A bubble bee flying in a meadow full of bubble bees"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bubble-bee.html" data-title="Bubble Bee Battle" style="--i: 17"><img src="../img/bubble-bee/bubblebee7.png" alt="A bubble bee being chased by other bubble bees"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bubble-bee.html" data-title="Bubble Bee Battle" style="--i: 18"><img src="../img/bubble-bee/bubblebee4.png" alt="A bubble bee being attacked by bubble bees on all sides"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bubble-bee.html" data-title="Bubble Bee Battle" style="--i: 19"><img src="../img/bubble-bee/bubblebee6.png" alt="A bubble bee being attacked from below by bubble bees"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bubble-bee.html" data-title="Bubble Bee Battle" style="--i: 20"><img src="../img/bubble-bee/bubblebee1.png" alt="A bubble bee flying in a meadow full of bubble bees"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="bubble-bee.html" data-title="Bubble Bee Battle" style="--i: 21"><img src="../img/bubble-bee/bubblebee3.png" alt="A bubble bee flying in a meadow full of bubble bees"></a>
+
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 22"><img src="../img/chesterfield/town2.png" alt="A juicebox village bustling with lint gnome residents and their giant pet fleas"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 23"><img src="../img/chesterfield/flea1.png" alt="A giant flea preparing to jump"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 24"><img src="../img/chesterfield/lake1.png" alt="A lake of energy drink filling the imprint of a butt"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 25"><img src="../img/chesterfield/forest1.png" alt="A forest filled with lint trees at the edge of a juicebox village"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 26"><img src="../img/chesterfield/gnome1.png" alt="A lint gnome in their chip bag home"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 27"><img src="../img/chesterfield/cockroach.png" alt="A giant cockroach standing at the edge of a forest of lint trees"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 28"><img src="../img/chesterfield/town1.png" alt="A view from the top of a lint tree overlooking the juicebox village"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 29"><img src="../img/chesterfield/cans.png" alt="Cans and mold littered around a pool of spilled energy drink"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 30"><img src="../img/chesterfield/dustmite.png" alt="Dustmite approaching from the forest"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 31"><img src="../img/chesterfield/town3.png" alt="A bird's eye view of the juicebox village"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 32"><img src="../img/chesterfield/popcorn.png" alt="A cluster of popcorn lying on the ground"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 33"><img src="../img/chesterfield/lake2.png" alt="A lake of energy drink filling the imprint of a butt"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="chesterfield.html" data-title="Chesterfield" style="--i: 34"><img src="../img/chesterfield/drain.png" alt="A large plastic tube with energy drink draining down it"></a>
+            
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="gone-bigmode.html" data-title="Gone Bigmode" style="--i: 35"><img src="../img/gone-bigmode/haywheel-night1.jpg" alt="Abomination in a spooky forest with a haywheel covered in Abominations behind him"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="gone-bigmode.html" data-title="Gone Bigmode" style="--i: 36"><img src="../img/gone-bigmode/mansion.jpg" alt="Abomination standing at the edge of a spooky forest in front of a mansion"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="gone-bigmode.html" data-title="Gone Bigmode" style="--i: 37"><img src="../img/gone-bigmode/haywheel-day1.jpg" alt="Abomination in a bright forest staring at a haywheel covered in smaller Abominations"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="gone-bigmode.html" data-title="Gone Bigmode" style="--i: 38"><img src="../img/gone-bigmode/dark-path.jpg" alt="Abomination on a spooky forest road"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="gone-bigmode.html" data-title="Gone Bigmode" style="--i: 39"><img src="../img/gone-bigmode/haywheel-day2.jpg" alt="Abomination in a bright forest staring at a haywheel covered in smaller Abominations"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="gone-bigmode.html" data-title="Gone Bigmode" style="--i: 40"><img src="../img/gone-bigmode/spawn.jpg" alt="Abomination walking down a road leading into a spooky forest"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="gone-bigmode.html" data-title="Gone Bigmode" style="--i: 41"><img src="../img/gone-bigmode/mansion2.jpg" alt="Abomination standing at the edge of a spooky forest in front of a mansion"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="gone-bigmode.html" data-title="Gone Bigmode" style="--i: 42"><img src="../img/gone-bigmode/haywheel-day3.jpg" alt="Abomination in a bright forest staring at a haywheel covered in smaller Abominations"></a>
+
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="maskotism.html" data-title="Maskotism" style="--i: 43"><img src="../img/maskotism/party1.png" alt="A party with a DJ, people dancing, and the main character awkwardly standing outside"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="maskotism.html" data-title="Maskotism" style="--i: 44"><img src="../img/maskotism/dudeski.png" alt="Character speaking to an NPC who says, 'Yeah, dude! You get it!'"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="maskotism.html" data-title="Maskotism" style="--i: 45"><img src="../img/maskotism/party2.png" alt="A party with a DJ, people dancing, and the main character awkwardly standing in the back"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="maskotism.html" data-title="Maskotism" style="--i: 46"><img src="../img/maskotism/chillman.png" alt="Character at a party, not matching the face of an NPC who says, 'You are making me quite uncomfortable... bro'"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="maskotism.html" data-title="Maskotism" style="--i: 47"><img src="../img/maskotism/autistic-embodiment.png" alt="Character in a room with discarded masks on the floor, speaking to an NPC who says, 'Hey! Do you wanna talke about trains, puzzles or dinos?'"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="maskotism.html" data-title="Maskotism" style="--i: 48"><img src="../img/maskotism/spacey.png" alt="Character in a room with discarded masks on the floor, speaking to an NPC who says, 'It's not even that I am sad for me, it's just unfair that no human will ever be able to visit the largest ultramassive black hole, TON-618'"></a>
+
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="monster-manor.html" data-title="Monster Manor Madness" style="--i: 49"><img src="../img/monster-manor/AbominationFoyer.png" alt="A large statue of Abomination overlooks a maid standing in the foyer of a mansion"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="monster-manor.html" data-title="Monster Manor Madness" style="--i: 50"><img src="../img/monster-manor/Manor.png" alt="The front driveway leading to the manor"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="monster-manor.html" data-title="Monster Manor Madness" style="--i: 51"><img src="../img/monster-manor/FrontFountain.png" alt="A large fountain in the front of the manor"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="monster-manor.html" data-title="Monster Manor Madness" style="--i: 52"><img src="../img/monster-manor/Garden.png" alt="A beautiful garden behind the manor"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="monster-manor.html" data-title="Monster Manor Madness" style="--i: 53"><img src="../img/monster-manor/Stairwell.png" alt="A stairwell leading to the basement of the manor"></a>
+
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 54"><img src="../img/nnjf/K-V-House-Behind.png" alt="NinjaNinJosh's house from behind, looking towards the red sand cliff"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 55"><img src="../img/nnjf/F-Sylvatica.png" alt="Looking up in a forest of trees"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 56"><img src="../img/nnjf/K-V-House-Below.png" alt="The front of NinjaNinJosh's house viewed from below"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 57"><img src="../img/nnjf/L-Burg-Back.png" alt="The back of a building in L-Burg"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 58"><img src="../img/nnjf/K-V-FromCliff.png" alt="K-Village viewed from a red sand cliff"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 59"><img src="../img/nnjf/K-V_Lake.png" alt="A lake viewed from the edge of a forest"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 60"><img src="../img/nnjf/L-Burg-Alley.png" alt="An alley in L-Burg"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 61"><img src="../img/nnjf/K-V-Above.png" alt="K-Village viewed from above"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 62"><img src="../img/nnjf/Abomination-Swarm.png" alt="Young NinjaNinJosh surrounded by an army of Abominations"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 63"><img src="../img/nnjf/L-Burg-Stairs.png" alt="Stairwell leading up a terrace in L-Burg"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 64"><img src="../img/nnjf/K-V-WStrasse.png" alt="A street in K-Village"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 65"><img src="../img/nnjf/L-Burg-Bridge1.png" alt="A bridge in L-Burg"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 66"><img src="../img/nnjf/K-V-Lake2.png" alt="A lake at the base of a hill, viewed from the edge of a forest"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 67"><img src="../img/nnjf/L-Burg-Front.png" alt="The front entry area of a L-Burg"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 68"><img src="../img/nnjf/L-Burg-Bridge3.png" alt="A view from the top of L-Burg with Abominations patrolling below"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 69"><img src="../img/nnjf/L-Burg-Forest.png" alt="L-Burg in the middle of a forest"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 70"><img src="../img/nnjf/L-Burg-Bridge2.png" alt="A bridge in L-Burg with Abomination looking around"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 71"><img src="../img/nnjf/K-V-Playground.png" alt="A playground in K-Village"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 72"><img src="../img/nnjf/L-T.png" alt="A three-way split road in L-Town"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="nnjf.html" data-title="NinjaNinJosh FURY" style="--i: 73"><img src="../img/nnjf/Cobble_Dumble.png" alt="Cobble and dumble brick textured pathway"></a>
+
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="not-a-drill.html" data-title="Not a Drill" style="--i: 74"><img src="../img/not-a-drill/drill-bubblebee.png" alt="Bubblebee chasing the drill"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="not-a-drill.html" data-title="Not a Drill" style="--i: 75"><img src="../img/not-a-drill/drill-wall1.png" alt="The drill drilling a brick wall"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="not-a-drill.html" data-title="Not a Drill" style="--i: 76"><img src="../img/not-a-drill/drill-start.png" alt="The drill's starting area, instructions read 'Press F to pick up drill bit, press LMB to drill'"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="not-a-drill.html" data-title="Not a Drill" style="--i: 77"><img src="../img/not-a-drill/drill-wall3.png" alt="The drill drilling a large split in a brick wall"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="not-a-drill.html" data-title="Not a Drill" style="--i: 78"><img src="../img/not-a-drill/drill-run.png" alt="Drill rushing forward"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="not-a-drill.html" data-title="Not a Drill" style="--i: 79"><img src="../img/not-a-drill/drill-wall2.png" alt="The drill next to a freshly damaged brick wall"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="not-a-drill.html" data-title="Not a Drill" style="--i: 80"><img src="../img/not-a-drill/drill-jump.png" alt="The drill jumping as the world blurs behind it"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="not-a-drill.html" data-title="Not a Drill" style="--i: 81"><img src="../img/not-a-drill/drill-wall4.png" alt="The drill drilling on top of a crumbling wall"></a>
+
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 82"><img src="../img/orbituary/OrbituaryPromo.PNG" alt="Orbituary placeholder cover art"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 83"><img src="../img/orbituary/orbituary0.06_beam-explosion.png" alt="Space cat shooting a beam, causing an asteroid to explode"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 84"><img src="../img/orbituary/orbituary0.06_between.png" alt="Space cat flying between two asteroids"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 85"><img src="../img/orbituary/orbituary0.06_speed.png" alt="Space cat enveloped in their expanded comet energy, causing nearby celestial objects to explode"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 86"><img src="../img/orbituary/orbituary0.06_beams.png" alt="Space cat shooting beams at asteroids"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 87"><img src="../img/orbituary/orbituary0.06_bursts.png" alt="Space cat flying towards exploding asteroids"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 88"><img src="../img/orbituary/orbituary0.06_beam-rain.png" alt="Space cat flying near beams of light"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 89"><img src="../img/orbituary/orbituary0.06_helix.png" alt="Space cat following their helix shot"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 90"><img src="../img/orbituary/orbituary0.06_planet-break.png" alt="Space cat flying towards an exploding planet"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 91"><img src="../img/orbituary/cat-tux.PNG" alt="Space cat's tuxedo outfit"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 92"><img src="../img/orbituary/cat-construction.PNG" alt="Space cat's construction outfit"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 93"><img src="../img/orbituary/cat-suit.PNG" alt="Space cat's business suit outfit"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="orbituary.html" data-title="Orbituary" style="--i: 94"><img src="../img/orbituary/cat-faith.PNG" alt="Space cat's Faith Connors cosplay"></a>
+
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 95"><img src="../img/rootball/BigGarden1.png" alt="Rootball covered in plants, overlooking a huge orchard of trees that are growing fruits, vegetables, and sunflowers"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 96"><img src="../img/rootball/Reservoir1.png" alt="A small pond reservoir with a couple trees growing from the center in the middle of a forest"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 97"><img src="../img/rootball/Holes1.png" alt="Scattered fruits and vegetables near open holes, waiting to be planted"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 98"><img src="../img/rootball/Forest1.png" alt="A low-poly forest viewed from the grass"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 99"><img src="../img/rootball/Pickup5.png" alt="Rootball carrying fruits, vegetables, and sunflowers"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 100"><img src="../img/rootball/Paths1.png" alt="A branching path in the forest"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 101"><img src="../img/rootball/Snow1.png" alt="A snowy forest area"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 102"><img src="../img/rootball/BigGarden2.png" alt="Rootball covered in plants, overlooking a huge orchard of trees that are growing fruits, vegetables, and sunflowers"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 103"><img src="../img/rootball/Paths2.png" alt="A path through the forest"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 104"><img src="../img/rootball/Reservoir2.png" alt="A path through the forest leading to the pond reservoir"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 105"><img src="../img/rootball/Pickup1.png" alt="Early rootball carrying various fruits and vegetables"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 106"><img src="../img/rootball/Pickup2.png" alt="Early rootball carrying various fruits and vegetables"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 107"><img src="../img/rootball/Pickup3.png" alt="Early rootball carrying various fruits and vegetables"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 108"><img src="../img/rootball/Pickup4.png" alt="Early rootball carrying various fruits and vegetables"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="rootball.html" data-title="Rootball" style="--i: 109"><img src="../img/rootball/FirstFoliage.png" alt="Early project image of when the trees and a small pond were first added to the map"></a>
+
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="shiprekt.html" data-title="Shiprekt" style="--i: 110"><img src="../img/shiprekt/spaceship.png" alt="A giant spaceship partially buried in a massive crater"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="shiprekt.html" data-title="Shiprekt" style="--i: 111"><img src="../img/shiprekt/submerged-tower.png" alt="A partially submerged tower and a speakeasy"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="shiprekt.html" data-title="Shiprekt" style="--i: 112"><img src="../img/shiprekt/bar.png" alt="The main area of the speakeasy"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="shiprekt.html" data-title="Shiprekt" style="--i: 113"><img src="../img/shiprekt/pyramid.png" alt="A huge pyramid that takes up the width of the frame, an entrance is visible at the base"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="shiprekt.html" data-title="Shiprekt" style="--i: 114"><img src="../img/shiprekt/maze-overview.png" alt="Overhead view of the maze inside the pyramid"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="shiprekt.html" data-title="Shiprekt" style="--i: 115"><img src="../img/shiprekt/attic.png" alt="A couple alien NPCs in the attic of a speakeasy, one is lying on the floor"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="shiprekt.html" data-title="Shiprekt" style="--i: 116"><img src="../img/shiprekt/city.png" alt="Alien city viewed from the edge"></a>
+            <a class="hex-item" href="#" data-lightbox-group="hex-gallery" data-link="shiprekt.html" data-title="Shiprekt" style="--i: 117"><img src="../img/shiprekt/pre-shader-overview.png" alt="An overhead view of the entire map before the Art Deco shader was applied"></a>
+          </div>
+        </div>
+
+        <!-- LIGHTBOX OVERLAY -->
+        <div id="lightbox" class="lightbox-overlay">
+          <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <button class="carousel-btn carousel-prev lightbox-nav" id="lightbox-prev" aria-label="Previous image"></button>
+            <button class="carousel-btn carousel-next lightbox-nav" id="lightbox-next" aria-label="Next image"></button>
+            <img id="lightbox-img" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 
+    
+    FOOTER
+    
+    -->
+    <footer class="bg-gray-900/80 backdrop-blur-lg border-t border-gray-800">
+      <div class="container mx-auto px-6 py-8">
+        <div class="site-footer__inner">
+          <div class="site-footer__top">
+            <div class="site-footer__brand">
+              <a href="index.html"><img src="img/logo/Bee_Logo1k.PNG" alt="Bismuth Bee Games logo" class="footer-logo"></a>
+            </div>
+
+            <div class="site-footer__nav">
+              <a href="index.html"><button class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Home</button></a>
+              <a href="devlog/index.html"><button class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Devlog</button></a>
+              <a href="index.html"><button class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Games</button></a>
+              <a href="../about/timeline.html"><button class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Timeline</button></a>
+              <a href="../about/index.html"><button class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">About</button></a>
+            </div>
+
+            <!-- FOOTER SOCIAL ICONS -->
+            <div class="site-footer__social">
+              <div class="flex items-center gap-3">
+
+                <!-- ITCH.IO -->
+                <a href="https://bismuth-bee-games.itch.io/" class="social-icon w-8 h-8 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="235.452" width="261.728" viewBox="0 0 245.37069 220.73612"><path fill="currentColor" d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z" /></svg></a>
+
+                <!-- TWITTER -->
+                <a href="https://x.com/bismuthbee" class="social-icon w-8 h-8 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="Twitter-X--Streamline-Bootstrap" height="16" width="16"><path fill="currentColor" d="M12.6 0.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867 -5.07 -4.425 5.07H0.316l5.733 -6.57L0 0.75h5.063l3.495 4.633L12.601 0.75Zm-0.86 13.028h1.36L4.323 2.145H2.865z" stroke-width="1"></path></svg></a>
+
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/bismuthbee" class="social-icon w-8 h-8 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" /></svg></a>
+
+                <!-- THREADS -->
+                <a href="https://www.threads.com/@bismuthbeegames" class="social-icon w-8 h-8 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161" /></svg></a>
+
+                <!-- FACEBOOK -->
+                <a href="https://www.facebook.com/BismuthBeeMedia/" class="social-icon w-8 h-8 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" /></svg></a>
+
+                <!-- YOUTUBE -->
+                <a href="https://www.youtube.com/@BismuthBeeMedia" class="social-icon w-8 h-8 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" /></svg></a>
+
+                <!-- SQUARESPACE BIO SITE -->
+                <a href="https://www.bio.site/BismuthBeeGames" class="social-icon w-10 h-10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="4000px" height="4000px" viewBox="0 0 4000 4000" preserveAspectRatio="xMidYMid meet"><path fill="currentColor" d="M1965.63 3741.41 c-19.53 -10.16 -119.14 -87.89 -187.11 -145.70 -47.27 -41.02 -77.34 -72.66 -74.61 -79.69 1.95 -6.25 62.11 -55.08 96.88 -78.52 86.72 -58.59 162.11 -81.25 237.89 -71.09 80.47 10.94 161.33 47.27 241.41 108.20 l16.41 12.50 -12.50 20.31 c-23.83 37.11 -72.66 82.03 -199.22 181.64 -58.20 45.70 -82.42 60.94 -95.31 60.94 -3.91 0 -14.45 -3.91 -23.83 -8.59z"/><path fill="currentColor" d="M1602.34 3273.44 l-20.70 -78.13 31.64 -34.77 c66.02 -71.88 165.23 -155.47 223.83 -187.89 57.42 -31.64 120.31 -50.78 168.75 -50.78 73.44 0 164.45 33.98 251.95 94.14 33.98 23.05 111.72 88.28 137.50 115.23 l14.45 15.23 -22.66 85.94 c-12.50 47.27 -24.22 85.94 -26.17 85.94 -1.95 0 -16.80 -8.59 -32.81 -19.53 -70.31 -46.09 -160.94 -83.59 -236.33 -97.66 -69.14 -12.89 -162.89 -7.03 -228.52 14.06 -63.28 20.70 -160.94 75.39 -215.23 121.09 -10.16 8.59 -19.92 15.23 -21.88 15.23 -1.56 0 -12.50 -35.16 -23.83 -78.13z"/><path fill="currentColor" d="M564.45 3146.48 c-11.33 -10.94 -11.72 -11.72 -3.91 -33.59 7.81 -22.27 30.08 -57.81 100.78 -161.72 81.25 -119.14 78.91 -116.41 112.89 -126.95 87.11 -26.56 178.91 -94.92 257.03 -192.19 56.25 -69.92 171.48 -235.55 239.06 -344.53 17.19 -27.73 59.77 -101.56 94.53 -164.06 73.44 -131.64 117.58 -203.52 165.23 -268.75 l33.98 -46.48 8.59 14.45 c12.50 20.70 9.38 33.59 -39.45 148.05 -13.67 32.42 -41.80 100.78 -62.11 152.34 -20.31 51.56 -50 123.83 -66.02 160.16 -16.02 36.72 -47.66 114.84 -71.09 173.83 -23.05 58.98 -53.13 135.55 -67.19 169.92 -37.11 91.41 -161.33 337.11 -191.02 377.34 -52.34 71.48 -132.81 104.30 -292.97 120.70 -96.88 9.77 -125.78 14.06 -167.58 23.83 -39.45 9.38 -39.45 9.38 -50.78 -2.34z"/><path fill="currentColor" d="M3359.38 3148.44 c-30.86 -8.20 -80.08 -15.23 -177.73 -25.39 -129.69 -13.67 -203.52 -40.23 -255.47 -91.02 -26.95 -26.56 -35.55 -41.02 -110.55 -185.55 -78.91 -152.34 -80.08 -155.08 -180.86 -410.94 -13.67 -34.38 -42.58 -104.69 -64.45 -156.25 -21.88 -51.56 -51.95 -124.61 -66.41 -162.11 -14.45 -37.50 -42.58 -106.64 -61.72 -153.13 -19.53 -46.48 -38.28 -94.53 -41.02 -106.25 -5.47 -20.70 -5.47 -21.88 3.91 -35.55 l9.77 -14.45 29.69 40.63 c58.98 80.08 86.33 124.61 178.52 289.84 72.27 130.08 169.53 283.59 259.38 408.59 115.23 160.94 213.28 246.09 321.48 278.91 27.34 8.59 29.30 9.77 51.17 37.89 28.52 36.33 139.06 201.56 155.08 231.64 26.17 50 8.59 68.36 -50.78 53.13z"/><path fill="currentColor" d="M1523.83 2950.39 c-4.69 -25.39 -10.94 -63.67 -13.67 -85.16 l-5.47 -38.67 23.83 -25.78 c162.89 -174.61 260.55 -251.56 364.06 -285.94 23.44 -7.81 35.16 -8.98 83.98 -8.98 61.33 0 78.91 3.13 135.94 25.39 42.19 16.41 108.20 56.25 159.38 96.88 23.44 18.36 78.52 69.53 122.27 113.28 l79.30 79.69 -2.73 28.13 c-1.56 15.23 -5.47 44.92 -8.98 65.63 l-6.64 37.89 -39.06 -31.25 c-108.98 -87.50 -216.41 -141.41 -322.27 -161.72 -50.39 -9.38 -136.72 -8.59 -185.55 2.34 -108.59 23.44 -213.28 85.55 -340.23 201.56 l-35.94 32.42 -8.20 -45.70z"/><path fill="currentColor" d="M102.73 2883.98 c-8.59 -3.13 -5.47 -15.63 18.75 -72.27 32.42 -76.17 42.97 -95.31 73.83 -132.42 48.83 -58.98 118.75 -118.75 287.11 -245.70 49.61 -37.11 110.16 -83.98 134.77 -103.52 69.14 -54.69 224.61 -174.22 304.69 -234.38 201.95 -151.56 395.31 -303.52 492.58 -387.11 38.28 -33.20 71.48 -56.25 80.08 -56.25 2.34 0 7.81 13.67 12.89 30.47 4.69 16.41 16.41 46.48 25.78 66.02 l17.19 36.33 -30.86 40.63 c-59.77 79.30 -102.34 148.44 -181.64 293.36 -65.63 119.92 -128.52 219.53 -235.55 373.05 -128.52 183.98 -206.25 259.38 -313.67 302.34 -55.47 22.66 -103.91 30.08 -316.02 49.22 -167.97 15.23 -193.36 17.97 -261.33 31.64 -51.17 10.16 -96.09 14.06 -108.59 8.59z"/><path fill="currentColor" d="M3773.44 2876.95 c-66.41 -14.06 -112.50 -19.92 -263.67 -33.20 -226.56 -19.92 -282.03 -30.08 -352.34 -64.45 -67.19 -32.81 -138.28 -95.31 -202.73 -178.13 -99.61 -127.34 -241.80 -344.92 -317.97 -485.94 -65.23 -120.70 -125.39 -218.36 -177.73 -287.11 -16.02 -21.09 -29.30 -40.23 -29.30 -42.19 0 -1.95 7.03 -18.36 15.23 -36.33 8.59 -17.97 19.14 -46.09 23.83 -62.11 4.69 -16.02 8.98 -31.64 10.16 -34.38 2.73 -8.59 30.08 8.59 80.08 51.17 104.30 87.89 304.69 245.70 503.13 396.48 80.86 61.33 186.33 142.58 234.77 180.47 48.44 37.89 135.55 104.69 193.36 148.44 149.61 112.50 192.19 147.27 250.39 205.08 58.59 58.20 76.56 84.77 109.38 160.55 33.20 76.56 34.38 80.47 26.17 86.33 -10.16 7.81 -52.73 5.47 -102.73 -4.69z"/><path fill="currentColor" d="M1505.47 2556.64 c1.56 -12.89 7.42 -43.36 12.50 -67.97 22.66 -101.56 49.61 -157.81 99.22 -207.81 66.02 -66.02 160.55 -117.58 311.72 -169.92 l59.77 -20.70 63.28 21.88 c153.91 52.73 248.83 105.08 316.41 174.22 33.98 34.77 62.89 92.19 82.42 162.89 12.11 45.31 27.73 124.22 25 126.95 -0.78 0.78 -18.75 -14.45 -40.23 -33.98 -207.03 -186.33 -414.45 -250.39 -605.08 -186.33 -95.70 32.03 -195.31 97.27 -294.92 192.58 l-32.42 31.64 2.34 -23.44z"/><path fill="currentColor" d="M1900.39 2035.16 c-73.44 -13.28 -108.20 -28.52 -166.02 -71.88 -105.86 -79.30 -194.14 -219.14 -215.23 -340.63 -6.25 -36.72 -2.34 -116.80 7.81 -155.86 19.14 -73.83 70.70 -153.52 154.30 -238.28 41.80 -42.97 51.17 -50 80.47 -64.06 18.36 -8.98 51.17 -20.70 73.05 -26.17 39.84 -9.77 40.63 -9.77 76.17 -3.91 44.92 7.81 112.50 7.81 155.47 0.39 46.88 -8.20 62.11 -7.42 98.05 5.86 50.78 18.36 80.08 37.11 122.27 77.73 91.41 89.06 144.92 172.66 167.58 262.11 12.11 49.61 11.33 125.39 -1.95 175.78 -28.52 106.25 -103.13 223.05 -185.16 289.06 -88.28 71.09 -148.44 92.58 -267.19 96.09 -44.92 1.17 -65.63 0 -99.61 -6.25z"/><path fill="currentColor" d="M1692.58 1115.63 c-49.22 -12.11 -89.45 -41.41 -110.55 -81.25 -12.11 -21.88 -13.67 -28.52 -14.84 -62.50 -1.56 -32.03 0 -42.97 8.59 -73.44 17.97 -62.11 41.02 -99.61 103.13 -166.80 67.19 -73.05 139.84 -121.48 213.67 -142.58 27.34 -7.81 39.84 -8.98 97.66 -8.59 60.55 0 69.53 1.17 100.78 10.55 71.88 22.27 129.69 60.16 196.88 128.91 73.05 75 101.95 121.88 118.75 192.97 15.23 63.67 4.69 112.11 -33.20 152.73 -31.25 33.59 -84.77 55.47 -134.77 55.47 -22.66 0 -26.17 -1.17 -53.91 -19.92 -61.33 -41.41 -108.59 -57.42 -180.47 -60.55 -78.52 -3.52 -140.23 13.28 -206.64 57.03 -33.98 22.66 -36.33 23.44 -60.16 23.05 -13.67 0 -33.59 -2.34 -44.92 -5.08z"/><path fill="currentColor" d="M1714.84 583.59 c-94.14 -59.77 -110.94 -76.17 -116.80 -113.67 -3.91 -26.56 0.39 -49.22 23.05 -120.31 25 -79.30 31.25 -95.70 36.33 -95.70 7.42 0 -1.17 43.75 -17.19 85.55 -27.73 72.66 -34.77 94.92 -34.77 112.50 0 38.28 16.02 55.86 108.20 118.36 34.77 23.83 63.67 44.14 63.67 45.31 0 5.86 -16.02 -2.34 -62.50 -32.03z"/><path fill="currentColor" d="M2199.22 615.23 c0 -1.17 23.05 -17.19 50.78 -35.55 73.44 -48.05 106.64 -75.39 116.80 -96.09 13.67 -28.13 10.55 -44.92 -20.70 -123.44 -14.45 -35.94 -29.69 -88.28 -29.69 -101.95 0 -8.98 7.03 -3.52 13.28 10.55 15.63 34.77 50 152.73 51.95 176.95 3.91 50 -15.23 72.66 -114.45 135.16 -51.95 32.42 -67.97 40.63 -67.97 34.38z"/></svg></a>
+
+                <!-- ARTSTATION 
+            <a href="https://www.artstation.com/ninjaninjosh" class="social-icon w-8 h-8 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32"><path fill="currentColor" d="M0 23.63l2.703 4.672c0.552 1.094 1.667 1.781 2.885 1.781h17.943l-3.724-6.453zM32 23.661c0-0.641-0.193-1.245-0.516-1.75l-10.516-18.276c-0.557-1.057-1.656-1.719-2.854-1.719h-5.557l16.24 28.135 2.563-4.432c0.5-0.849 0.641-1.224 0.641-1.958zM17.161 19.047l-7.255-12.568-7.26 12.568z"></path></svg></a>
+                -->
+
+                <!-- SKETCHFAB
+            <a href="https://sketchfab.com/NinjaNinJosh" class="social-icon w-8 h-8 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 13 13"><path fill="currentColor" d="m 7.7215115,7.835445 4.3544155,-2.303813 0,4.987339 L 7.7468165,13 7.7215165,7.784809 M 1.9240383,5.531658 6.2531745,7.886082 6.2278445,13 1.8987349,10.518997 1.9240399,5.556964 M 6.9873475,1 1.8987345,3.936711 6.9873475,6.670899 12.101266,3.936711 6.9873475,1"></path></svg></a>
+                -->
+                <!-- CONTRACTOR PORTFOLIO -->
+
+              </div>
+            </div>
+          </div>
+          <div class="site-footer__bottom">
+            <div class="site-footer__copyright">
+              © 2025 Bismuth Bee Games. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </div>
+</body>
+
+</html>
