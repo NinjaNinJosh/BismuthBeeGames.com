@@ -160,7 +160,7 @@ document.querySelectorAll('.carousel-btn').forEach(btn => {
     });
   }
 
-  // NAVBAR SCROLL EFFECT
+  // ===== NAVBAR SCROLL EFFECT =====
   if (navbar) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -181,7 +181,7 @@ document.querySelectorAll('.carousel-btn').forEach(btn => {
       e.preventDefault();
       const targetSection = document.querySelector(targetId);
       if (targetSection) {
-        const offsetTop = targetSection.offsetTop - 70; // navbar height
+        const offsetTop = targetSection.offsetTop - 70;
         window.scrollTo({ top: offsetTop, behavior: 'smooth' });
 
         targetSection.classList.add('section-highlight');
@@ -216,6 +216,37 @@ document.querySelectorAll('.carousel-btn').forEach(btn => {
         options.forEach((opt) => opt.classList.remove('active'));
         option.classList.add('active');
       });
+    });
+  });
+
+  // ===== TEAM HEXAGON GALLERY =====
+  const teamHexItems = document.querySelectorAll('.team-hex-item');
+  const teamPanels = document.querySelectorAll('.team-panel');
+  const teamPanelCloseButtons = document.querySelectorAll('.team-panel-close');
+  function closeAllPanels() {
+    teamPanels.forEach((panel) => panel.classList.add('hidden'));
+    teamHexItems.forEach((hex) => hex.classList.remove('active'));
+  }
+
+  teamHexItems.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const teamId = item.getAttribute('data-team-id');
+      const targetPanel = document.getElementById(`team-panel-${teamId}`);
+      if (!targetPanel) return;
+      const isActive = item.classList.contains('active');
+      closeAllPanels();
+     
+      if (!isActive) {
+        targetPanel.classList.remove('hidden');
+        item.classList.add('active');
+      }
+    });
+  });
+
+  teamPanelCloseButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      closeAllPanels();
     });
   });
 

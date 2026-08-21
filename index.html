@@ -5,6 +5,8 @@
   <title>Bismuth Bee Games</title>
   <link rel="stylesheet" href="css/bismuth.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -27,9 +29,7 @@
       -->
       <svg>
         <pattern id="hexagons" width="69.2" height="60" patternUnits="userSpaceOnUse">
-          <path
-            d="M43.25 15.029 56.2 22.506V37.494L43.25 44.971 30.3 37.494V22.506ZM13-9H4.3V7.494L-9.969 15.733l4.35 7.534L8.65 15.029 21.6 22.506V37.494L8.65 44.971-5.619 36.733l-4.35 7.534L4.3 52.506V69H13V52.506l12.95-7.477L38.9 52.506V69h8.7V52.506l12.95-7.477 14.269 8.238 4.35-7.534L64.9 37.494V22.506l14.269-8.239-4.35-7.534L60.55 14.971 47.6 7.494V-9H38.9V7.494L25.95 14.971 13 7.494Z" />
-        </pattern>
+          <path d="M43.25 15.029 56.2 22.506V37.494L43.25 44.971 30.3 37.494V22.506ZM13-9H4.3V7.494L-9.969 15.733l4.35 7.534L8.65 15.029 21.6 22.506V37.494L8.65 44.971-5.619 36.733l-4.35 7.534L4.3 52.506V69H13V52.506l12.95-7.477L38.9 52.506V69h8.7V52.506l12.95-7.477 14.269 8.238 4.35-7.534L64.9 37.494V22.506l14.269-8.239-4.35-7.534L60.55 14.971 47.6 7.494V-9H38.9V7.494L25.95 14.971 13 7.494Z" /></pattern>
         <rect class="pat" style="fill:url(#hexagons)" />
         <g id="container" />
         <g id="hexagons" />
@@ -105,7 +105,7 @@
             <a href="about/timeline.html"><button class="mobile-nav-link block text-gray-300 hover:text-yellow-400 hover:bg-gray-800/50 px-4 py-2 rounded-md transition-colors duration-200">Timeline</button></a>
             <div class="px-4 pt-2">
               <a href="about/index.html"><button class="contact-btn w-full px-4 py-2 bg-gradient-to-r from-violet-900 to-indigo-700 rounded-lg text-white text-sm font-medium flex items-center justify-center gap-2 hover:from-violet-900 hover:to-indigo-600 transition-all duration-300">
-                  <span class="bg-gradient-to-r from-yellow-300 to-violet-800 bg-clip-text text-transparent">Contact</span>
+                  <span class="bg-gradient-to-r from-yellow-300 to-violet-800 bg-clip-text text-transparent">About</span>
                 </button></a>
             </div>
           </div>
@@ -120,21 +120,21 @@
     -->
     <main>
       <section id="home" class="hero-video-section relative overflow-hidden">
-        <video src="vid/Orbituary0.06_Trailer-1080.mp4" class="block w-full h-auto" preload autoplay muted loop playsinline><alt>Orbituary 0.06 Trailer</alt></video>
+        <video src="vid/Orbituary0.06_Trailer-720.mp4" class="block w-full h-auto" preload autoplay muted loop playsinline><alt>Orbituary 0.06 Trailer</alt></video>
         <div class="absolute inset-0 bg-black opacity-40 pointer-events-none"></div>
         <div class="absolute inset-0 z-10 flex items-center justify-center">
           <div class="container mx-auto px-4 text-center">
             <h1 class="font-bold bg-gradient-to-r from-violet-800 via-indigo-600 to-purple-700 bg-clip-text text-transparent text-4xl md:text-5xl lg:text-8xl leading-tight mb-4">Bismuth Bee Games</h1>
             <p class="text-gray-200 mx-auto text-lg md:text-xl lg:text-2xl leading-snug max-w-3xl mb-6">Making games is our Bismuth! Join us on our journey through the world of game development.</p>
-            <div class="flex flex-wrap justify-center gap-4">
+            <div class="flex flex-wrap justify-center gap-4 mb-6">
               <a href="games/index.html" class="shrink-0 px-6 py-3 bg-gradient-to-r from-violet-900/90 to-indigo-900/90 rounded-lg text-white text-base font-medium flex items-center justify-center gap-2 hover:from-violet-800/90 hover:to-indigo-800/90 transition-all duration-300">
                 <span class="bg-gradient-to-r from-yellow-300 to-indigo-400 bg-clip-text text-transparent"><b>Games</b></span>
               </a>
               <a href="about/index.html" class="shrink-0 px-6 py-3 bg-transparent border border-yellow-500/30 rounded-lg text-violet-400 text-base font-medium flex items-center justify-center gap-2 hover:bg-yellow-900/10 hover:border-yellow-500/50 transition-all duration-300"><b>Learn More</b></a>
             </div>
+            <div class="animate-bounce z-10"><svg class="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-yellow-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></div>
           </div>
         </div>
-        <div class="absolute bottom-60 left-1/2 transform -translate-x-1/2 animate-bounce z-10"><svg class="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg></div>
       </section>
 
       <!-- 
@@ -157,7 +157,7 @@
           <button class="carousel-btn carousel-prev" data-carousel-button="prev" aria-label="Previous"></button>
           <button class="carousel-btn carousel-next" data-carousel-button="next" aria-label="Next"></button>
           <ul data-slides>
-            <li class="slide" data-active><img src="img/bee-bomber/approach.png" alt="Drone approaching hive"></li>
+            <li class="slide" data-active><img src="img/bee-bomber/flyby2.png" alt="Drone approaching hive"></li>
             <li class="slide"><img src="img/bombuszled/bike-rack.png" alt="A view from the grass of a forest across from a building"></li>
             <li class="slide"><img src="img/bubble-bee/bubblebee1.png" alt="A bubble bee flying in a meadow full of bubble bees"></li>
             <li class="slide"><img src="img/chesterfield/cans.png" alt="Cans and mold littered around a pool of spilled energy drink"></li>
@@ -369,7 +369,7 @@
       HEXAGON GALLERY SECTION
 
       -->
-      <section id="hex-gallery" class="min-h-screen flex items-center relative py-20">
+      <section id="hex-gallery" class="min-h-screen flex items-center relative py-0">
         <div class="container mx-auto px-6">
           <div class="max-w-5xl mx-auto text-center mb-12">
             <div class="inline-block mb-3">
@@ -460,7 +460,7 @@
         DEVLOG SECTION
       
       -->
-      <section id="devlog" class="min-h-screen flex items-center relative py-10">
+      <section id="devlog" class="min-h-screen flex items-center relative py-0">
         <div class="container mx-auto px-6">
           <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
@@ -586,54 +586,11 @@
       </section>
 
       <!-- 
-      
-      TIMELINE FUNCTION
-
-      -->
-      <section id="cd-timeline" class="cd-container">
-        <div class="cd-timeline-block">
-          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="games/maskotism.html" data-title="Maskotism">
-            <img src="img/bubble-bee/bubblebee1.png" alt="Image">
-          </div>
-          <div class="cd-timeline-content">
-            <div class="font-medium text-xl text-violet-400 mb-3">Maskotism - Global Game Jam 2026</div>
-            <p class="text-gray-300">Joshua Graham partners with Roe Rocket to collaborate on developing Maskotism for Global Game Jam's 2026 theme: "Mask”</p>
-            <a href="#0" class="cd-read-more">Read more</a>
-            <span class="cd-date">Jan 30, 2026</span>
-          </div>
-        </div>
-
-        <div class="cd-timeline-block">
-          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="games/not-a-drill.html" data-title="Not a Drill">
-            <img src="img/bubble-bee/bubblebee2.png" alt="Image">
-          </div>
-          <div class="cd-timeline-content">
-            <div class="font-medium text-xl text-violet-400 mb-3">Not a Drill - BigMode Game Jam 2025</div>
-            <p class="text-gray-300">Play as a destructive drill!</p>
-            <a href="#0" class="cd-read-more">Read more</a>
-            <span class="cd-date">Feb 9, 2025</span>
-          </div>
-        </div>
-
-        <div class="cd-timeline-block">
-          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="games/bubble-bee.html" data-title="Bubble Bee Battle">
-            <img src="img/bubble-bee/bubblebee3.png" alt="Image">
-          </div>
-          <div class="cd-timeline-content">
-            <div class="font-medium text-xl text-violet-400 mb-3">Bubble Bee Battle - Global Game Jam 2025</div>
-            <p class="text-gray-300">Pop competitive bubble bees with your bubble wand stinger in this fast-paced battle!</p>
-            <a href="#0" class="cd-read-more">Read more</a>
-            <span class="cd-date">Jan 26, 2025</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- 
     
       CONTACT SECTION
     
       -->
-      <section id="contact" class="min-h-screen flex items-center relative py-20">
+      <section id="contact" class="min-h-screen flex items-center relative py-0">
         <div class="container mx-auto px-6">
           <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">

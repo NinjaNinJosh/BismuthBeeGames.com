@@ -1,15 +1,701 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeline</title>
-    <link rel="stylesheet" href="../css/style.css">
-    </head>
-<body>
-    <div class="container">
-        <h1>Timeline</h1>
-        <p>Line of Time</p>
+<html>
+	<head>
+		<title>Bismuth Bee Games - Timeline</title>
+		<link rel="stylesheet" href="../css/bismuth.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+    <div class="bg-black overflow-x-hidden">
+      <!-- Background elements -->
+      <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-20 left-10 w-96 h-96 bg-violet-900/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-indigo-900/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-40 right-20 w-64 h-64 bg-yellow-900/10 rounded-full blur-3xl"></div>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <script defer src="../js/bismuth.js"></script>
+    
+        <!-- ATTN!!! -->
+    
+        <!-- 
+    
+        HEXAGON BACKGROUND
+    
+        -->
+        <svg><pattern id="hexagons" width="69.2" height="60" patternUnits="userSpaceOnUse"><path d="M43.25 15.029 56.2 22.506V37.494L43.25 44.971 30.3 37.494V22.506ZM13-9H4.3V7.494L-9.969 15.733l4.35 7.534L8.65 15.029 21.6 22.506V37.494L8.65 44.971-5.619 36.733l-4.35 7.534L4.3 52.506V69H13V52.506l12.95-7.477L38.9 52.506V69h8.7V52.506l12.95-7.477 14.269 8.238 4.35-7.534L64.9 37.494V22.506l14.269-8.239-4.35-7.534L60.55 14.971 47.6 7.494V-9H38.9V7.494L25.95 14.971 13 7.494Z"/></pattern><rect class="pat" style="fill:url(#hexagons)"/><g id="container"/><g id="hexagons"/></svg>
+      </div>
+
+      <!--
+  
+      NAVIGATION BAR
+  
+      -->
+      <nav id="navbar" class="fixed top-0 left-0 right-0 bg-gray-900/70 backdrop-blur-lg border-b border-yellow-500/30 z-50 transition-all duration-300">
+        <div class="container mx-auto px-1 py-2">
+          <div class="flex items-center justify-between">
+            <!-- LOGO -->
+            <div class="flex items-center"><a href="../index.html" class="navbar-logo"><img src="../img/logo/Bee_Banner1k2.PNG" alt="Bismuth Bee Games"></a></div>
+
+            <!-- DESKTOP NAVIGATION -->
+            <div class="hidden md:flex items-center space-x-1">
+              <a href="../index.html"class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Home</a>
+              <a href="../devlog/index.html"class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Devlog</a>
+
+              <div class="dropdown">
+                <div class="select color:--text-primary hover:--accent-400">
+                  <span class="selected"><a href="../games/index.html" class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Games</a></span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                  <a href="../games/bee-bomber.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Bee Bomber</li></a>
+                  <a href="../games/bombuszled.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Bombuszled</li></a>
+                  <a href="../games/bubblebee.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Bubble Bee</li></a>
+                  <a href="../games/chesterfield.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Chesterfield</li></a>
+                  <a href="../games/gone-big-mode.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Gone Big Mode</li></a>
+                  <a href="../games/maskotism.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Maskotism</li></a>
+                  <a href="../games/monster-manor.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Monster Manor</li></a>
+                  <a href="../games/ninjaninjosh-fury.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>NinjaNinJosh FURY</li></a>
+                  <a href="../games/not-a-drill.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Not a Drill</li></a>
+                  <a href="../games/orbituary.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Orbituary</li></a>
+                  <a href="../games/rootball.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Rootball</li></a>
+                  <a href="../games/shiprekt.html" class="nav-link text-gray-300 hover:text-yellow-400 rounded-md transition-colors duration-200"><li>Shiprekt</li></a>
+                </ul>
+              </div>
+              <a href="timeline.html"><button class="nav-link text-violet-400 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Timeline</button></a>
+
+              <div class="relative ml-4 group">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-violet-800/50 to-indigo-600/50 rounded-lg blur opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
+                <a href="index.html">
+                  <button class="contact-btn px-4 py-2 bg-gradient-to-r from-violet-900/90 to-indigo-900/90 rounded-lg text-white text-sm font-medium relative z-10 flex items-center justify-center gap-2 group-hover:from-violet-800/90 group-hover:to-indigo-800/90 transition-all duration-300">
+                    <span class="bg-gradient-to-r from-yellow-300 to-violet-300 bg-clip-text text-transparent">About</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <!-- MOBILE NAVIGATION BUTTON -->
+            <div class="flex md:hidden">
+              <button id="mobile-menu-button" class="relative w-10 h-10 focus:outline-none group" aria-label="Toggle menu">
+                <div class="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+                  <span class="block h-0.5 w-5 bg-yellow-400 mb-1 transform transition duration-300 ease-in-out" id="line1"></span>
+                  <span class="block h-0.5 w-5 bg-yellow-400 mb-1 transform transition duration-300 ease-in-out" id="line2"></span>
+                  <span class="block h-0.5 w-5 bg-yellow-400 transform transition duration-300 ease-in-out" id="line3"></span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="md:hidden h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="pt-2 pb-4 space-y-1">
+              <a href="../index.html"><button class="mobile-nav-link block text-gray-300 hover:text-yellow-400 hover:bg-gray-800/50 px-4 py-2 rounded-md transition-colors duration-200">Home</button></a>
+              <a href="../devlog/index.html"><button class="mobile-nav-link block text-gray-300 hover:text-yellow-400 hover:bg-gray-800/50 px-4 py-2 rounded-md transition-colors duration-200">Devlog</button></a>
+              <a href="../games/index.html"><button class="mobile-nav-link block text-gray-300 hover:text-yellow-400 hover:bg-gray-800/50 px-4 py-2 rounded-md transition-colors duration-200">Games</button></a>
+              <a href="timeline.html"><button class="mobile-nav-link block text-violet-400 hover:text-yellow-400 hover:bg-gray-800/50 px-4 py-2 rounded-md transition-colors duration-200">Timeline</button></a>
+              <div class="px-4 pt-2">
+                <a href="index.html"><button class="contact-btn w-full px-4 py-2 bg-gradient-to-r from-violet-900 to-indigo-700 rounded-lg text-white text-sm font-medium flex items-center justify-center gap-2 hover:from-violet-900 hover:to-indigo-600 transition-all duration-300">
+                    <span class="bg-gradient-to-r from-yellow-300 to-violet-800 bg-clip-text text-transparent">About</span>
+                  </button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!--
+
+      MAIN CONTENT
+
+      -->
+      <Main>
+        <div class="flex flex-col items-center text-center py-20">
+          <div class="relative mb-4">
+            <div class="absolute inset-0 bg-yellow-500/20 rounded-full blur-3xl"></div>
+            <h1 class="text-1 md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-violet-800 via-indigo-600 to-purple-700 bg-clip-text text-transparent pb-2 relative">Timeline</h1>
+          </div>
+          <div class="flex flex-col items-center text-center relative">
+            <div class="max-w-5xl mx-auto">
+              <div class="text-center mb-12">
+                <div class="inline-block mb-3">
+
+                  <!-- DESCRIPTION-->
+                  <div class="text-xs text-yellow-400 tracking-widest uppercase mb-1"> A timeline of our progress at Bismuth Bee Games</div>
+
+                  <!-- DEVLOG BUTTON -->
+                  <div class="flex justify-center text-yellow-400 uppercase mb-1 py-5"><a href="../devlog/index.html"><button class="contact-btn px-4 py-2 bg-gradient-to-r from-violet-900/90 to-indigo-900/90 rounded-lg text-white relative z-10 flex items-center justify-center gap-2 group-hover:from-violet-800/90 group-hover:to-indigo-800/90 transition-all duration-300">
+                    <span class="bg-gradient-to-r from-yellow-400 to-cyan-400 bg-clip-text text-transparent underline">See Grid View</span>
+                  </button></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        <!-- 
+    
+        TIMELINE FUNCTION
+
+        -->
+        <section id="cd-timeline" class="cd-container">
+        <!-- Log 1 Some Stupid Crap to Bismuth Bees -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/bismuth-bees-origin.html" data-title="Some Stupid Crap to Bismuth Bees">
+            <img src="../img/logo/SSCPS.jpg" alt="Some Stupid Crap Production Studio Logo">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Some Stupid Crap to Bismuth Bees</div>
+            <p class="text-gray-300">An overview of how Bismuth Bee Games came to be.</p>
+            <a href="../devlog/bismuth-bees-origin.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jun 15, 2007</span>
+          </div>
+        </div>
+
+        <!-- Log 2 Inspired to develop games -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/inspired-to-develop.html" data-title="Inspired to develop games">
+            <img src="../img/orbituary/cat-faith.PNG" alt="Orbituary Cat in Faith cosplay">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Inspired to develop games</div>
+            <p class="text-gray-300">How Mirror’s Edge served as inspiration to learn game development and start making games.</p>
+            <a href="../devlog/inspired-to-develop.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Sept 15, 2009</span>
+          </div>
+        </div>
+
+        <!-- Log 3 Jump to 3D in UDK3 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/jump-to-udk3.html" data-title="Jump to 3D in UDK3">
+            <img src="../img/ext/Unreal_Engine_3_Logo.jpg" alt="UDK3 Logo">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Jump to 3D in UDK3</div>
+            <p class="text-gray-300">Wanting to move to 3D, we discover the wonders of Unreal Development Kit 3.</p>
+            <a href="../devlog/jump-to-udk3.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Aug 15, 2012</span>
+          </div>
+        </div>
+
+        <!-- Log 4 Planning and Pre-Production of NNJF -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/planning-preproduction-nnjf.html" data-title="Planning and Pre-Production of NNJF">
+            <img src="../img/team/nnjf-flowchart.jpg" alt="Flowchart of NinjaNinJosh FURY's story">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Planning and Pre-Production of NNJF</div>
+            <p class="text-gray-300">Joshua Graham begins the planning and pre-production of NinjaNinJosh FURY and starts 3D modeling courses.</p>
+            <a href="../devlog/planning-preproduction-nnjf.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Dec 17, 2015</span>
+          </div>
+        </div>
+
+        <!-- Log 5 NinjaNinJosh FURY Experimentation -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/nnjf-experimentation.html" data-title="NinjaNinJosh FURY Experimentation">
+            <img src="../img/prototype/abomination-fire.PNG" alt="Abomination standing with a floating orb of grass and a fire behind him">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">NinjaNinJosh FURY Experimentation</div>
+            <p class="text-gray-300">The horrible, nightmarish, and unethical experiments we subjected Abomination to while practicing developing in UE4.</p>
+            <a href="../devlog/nnjf-experimentation.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Dec 31, 2018</span>
+          </div>
+        </div>
+
+        <!-- Log 6 NinjaNinJosh FURY First Packages -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/nnjf-first-packages.html" data-title="NinjaNinJosh FURY First Packages">
+            <img src="../img/nnjf/K-V-House-Below.png" alt="Front of NinjaNinJosh's house viewed from below">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">NinjaNinJosh FURY First Packages</div>
+            <p class="text-gray-300">Working hard to finish the home village for NinjaNinJosh FURY’s playable trailer in time for it to be a birthday gift!</p>
+            <a href="../devlog/nnjf-first-packages.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jan 20, 2019</span>
+          </div>
+        </div>
+
+        <!-- NinjaNinJosh FURY Development Pauses -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/nnjf-development-pauses.html" data-title="NinjaNinJosh FURY Development Pauses">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">NinjaNinJosh FURY Development Pauses</div>
+            <p class="text-gray-300">After years of experimentation, learning UE4, designing the maps, modeling props, populating the environments, and programming mechanics, NinjaNinJosh FURY development comes to a halt.</p>
+            <a href="../devlog/nnjf-development-pauses.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Aug 7, 2020</span>
+          </div>
+        </div>
+
+        <!-- Bombuszled - Global Game Jam 2019 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/bombuszled-ggj19.html" data-title="Bombuszled - Global Game Jam 2019">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Bombuszled - Global Game Jam 2019</div>
+            <p class="text-gray-300">How discovering the Seattle Indies led to our first Global Game Jam, and how their site at PacSci inspired Bombuszled!</p>
+            <a href="../devlog/bombuszled-ggj19.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jan 27, 2019</span>
+          </div>
+        </div>
+
+        <!-- Bombuszled Build -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/bombuszled-build.html" data-title="Bombuszled Build">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Bombuszled Build</div>
+            <p class="text-gray-300">The struggles of overcoming lighting builds and distractions to finally get Bombuszled available on Itch!</p>
+            <a href="../devlog/bombuszled-build.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Feb 2, 2019</span>
+          </div>
+        </div>
+
+        <!-- Showcasing Bombuszled and NNJF at PacSci -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/showcasing-pacsci.html" data-title="Showcasing Bombuszled and NNJF at PacSci">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Showcasing Bombuszled and NNJF at PacSci</div>
+            <p class="text-gray-300">Just a few weeks after Global Game Jam, we got to showcase Bombuszled and NinjaNinJosh FURY at PacSci!</p>
+            <a href="../devlog/showcasing-pacsci.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Feb 10, 2019</span>
+          </div>
+        </div>
+
+        <!-- New Version for Pocket/PC Gamer Connects! -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/pgc-connects19.html" data-title="New Version for Pocket/PC Gamer Connects!">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">New Version for Pocket/PC Gamer Connects!</div>
+            <p class="text-gray-300">Shortly after showcasing at PacSci, Seattle Indies invited us to showcase our updated games at Pocket/PC Gamer Connects!</p>
+            <a href="../devlog/pgc-connects19.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">May 15, 2019</span>
+          </div>
+        </div>
+
+        <!-- NinjaNinJosh FURY Ending Remade in UE4 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/nnjf-ending-remake.html" data-title="NinjaNinJosh FURY Ending Remade in UE4">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">NinjaNinJosh FURY Ending Remade in UE4</div>
+            <p class="text-gray-300">We recreated the ending from the NinjaNinJosh FURY YouTube series in Unreal Engine 4!</p>
+            <a href="../devlog/nnjf-ending-remake.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jun 8, 2019</span>
+          </div>
+        </div>
+
+        <!-- Bee Bomber - UE4 Jam 2019 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/bee-bomber-ue4jam19.html" data-title="Bee Bomber - UE4 Jam 2019">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Bee Bomber - UE4 Jam 2019</div>
+            <p class="text-gray-300">How we made Bee Bomber for UE4 Jam’s “Make it Count” theme.</p>
+            <a href="../devlog/bee-bomber-ue4jam19.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Aug 13, 2019</span>
+          </div>
+        </div>
+
+        <!-- C(om)at Me - Epic Mega Jam 2019 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/comat-me-emj19.html" data-title="C(om)at Me - Epic Mega Jam 2019">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">C(om)at Me - Epic Mega Jam 2019</div>
+            <p class="text-gray-300">How we made C(om)at me for Epic Mega Jam’s “Down to Earth” theme!</p>
+            <a href="../devlog/comat-me-emj19.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Nov 21, 2019</span>
+          </div>
+        </div>
+
+        <!-- Bismuth Bee YouTube Account Finally Created! -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/bismuth-bee-youtube.html" data-title="Bismuth Bee YouTube Account Finally Created!">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Bismuth Bee YouTube Account Finally Created!</div>
+            <p class="text-gray-300">Branching from SSCPS to become Bismuth Bee Media, we create our YouTube channel and upload 3 game trailers!</p>
+            <a href="../devlog/bismuth-bee-youtube.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Dec 7, 2019</span>
+          </div>
+        </div>
+
+        <!-- Growing as a Developer -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/growing-developer.html" data-title="Growing as a Developer">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Growing as a Developer</div>
+            <p class="text-gray-300">2019 led to so many connections that helped improve Bismuth Bee Media’s quality and productivity!</p>
+            <a href="../devlog/growing-developer.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Dec 15, 2019</span>
+          </div>
+        </div>
+
+        <!-- Shiprekt + Trailer - Global Game Jam 2020 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/shiprekt-ggj20.html" data-title="Shiprekt + Trailer - Global Game Jam 2020">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Shiprekt + Trailer - Global Game Jam 2020</div>
+            <p class="text-gray-300">How we made “Shiprekt” for Global Game Jam’s “Repair” theme!</p>
+            <a href="../devlog/shiprekt-ggj20.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Feb 2, 2020</span>
+          </div>
+        </div>
+
+        <!-- Chesterfield + Trailer - Global Game Jam 2021 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/chesterfield-ggj21.html" data-title="Chesterfield + Trailer - Global Game Jam 2021">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Chesterfield + Trailer - Global Game Jam 2021</div>
+            <p class="text-gray-300">How we challenged ourselves to make our first VR game, Chesterfield for Global Game Jam’s “Lost” theme!</p>
+            <a href="../devlog/chesterfield-ggj21.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jan 31, 2021</span>
+          </div>
+        </div>
+
+        <!-- Bismuth Bee Media Site Launched! -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/bbm-site.html" data-title="Bismuth Bee Media Site Launched!">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Bismuth Bee Media Site Launched!</div>
+            <p class="text-gray-300">Using Google Sites to launch our Bismuth Bee Media website!</p>
+            <a href="../devlog/bbm-site.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jun 13, 2021</span>
+          </div>
+        </div>
+
+        <!-- Orbituary - Finish Your Game Jam 2021 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/orbituary-fyj2021.html" data-title="Orbituary - Finish Your Game Jam 2021">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Orbituary - Finish Your Game Jam 2021</div>
+            <p class="text-gray-300">C(om)at Me gets several updates and retitled as Orbituary during Finish Your Game Jam 2021!</p>
+            <a href="../devlog/orbituary-fyj2021.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Nov 22, 2021</span>
+          </div>
+        </div>
+
+        <!-- Monster Manor Madness - Global Game Jam 2022 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/monster-manor-madness-ggj22.html" data-title="Monster Manor Madness - Global Game Jam 2022">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Monster Manor Madness - Global Game Jam 2022</div>
+            <p class="text-gray-300">How we challenged ourselves by jumping into Unreal Engine 5 for the first time to make Monster Manor Madness for GGJ 2022!</p>
+            <a href="../devlog/monster-manor-madness-ggj22.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jan 30, 2022</span>
+          </div>
+        </div>
+
+        <!-- Orbituary at Pocket/PC Gamer Connects 2022 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/orbituary-pcgamer-connects2022.html" data-title="Orbituary at Pocket/PC Gamer Connects 2022">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Orbituary at Pocket/PC Gamer Connects 2022</div>
+            <p class="text-gray-300">After a a couple years being remote, Pocket/PC Gamer Connects comes back and invites us to exhibit Orbituary!</p>
+            <a href="../devlog/orbituary-pcgamer-connects2022.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">May 10, 2022</span>
+          </div>
+        </div>
+
+        <!-- Orbituary v0.05 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/orbituary-v005.html" data-title="Orbituary v0.05">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Orbituary v0.05</div>
+            <p class="text-gray-300">More updates get made based on playtester feedback given at Pocket Gamer Connects 2022!</p>
+            <a href="../devlog/orbituary-v005.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Oct 21, 2022</span>
+          </div>
+        </div>
+
+        <!-- Rootball - Global Game Jam 2023 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/rootball-ggj2023.html" data-title="Rootball - Global Game Jam 2023">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Rootball - Global Game Jam 2023</div>
+            <p class="text-gray-300">How resting allowed us to create Rootball — our most successful jam game so far during Global Game Jam 2023!</p>
+            <a href="../devlog/rootball-ggj2023.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Feb 5, 2023</span>
+          </div>
+        </div>
+
+        <!-- Orbituary v0.06 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/orbituary-v006.html" data-title="Orbituary v0.06">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Orbituary v0.06</div>
+            <p class="text-gray-300">Orbituary gets tons of exciting new updates with several bug fixes, improvements, and even procedural generation!</p>
+            <a href="../devlog/orbituary-v006.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Feb 21, 2023</span>
+          </div>
+        </div>
+
+        <!-- Orbituary Trailer 2 Released -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/orbituary-trailer-2.html" data-title="Orbituary Trailer 2 Released">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Orbituary Trailer 2 Released</div>
+            <p class="text-gray-300">Second Orbituary trailer featuring all the visual and gameplay improvements in v0.06!</p>
+            <a href="../devlog/orbituary-trailer-2.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">May 11, 2023</span>
+          </div>
+        </div>
+
+        <!-- Orbituary Back at Pocket/PC Gamer Connects 2023 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/orbituary-pcgamer-connects2023.html" data-title="Orbituary Back at Pocket/PC Gamer Connects 2023">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Orbituary Back at Pocket/PC Gamer Connects 2023</div>
+            <p class="text-gray-300">With advanced notice this year, we made several new improvements on Orbituary for Pocket/PC Gamer Connects 2023!</p>
+            <a href="../devlog/orbituary-pcgamer-connects2023.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">May 17, 2023</span>
+          </div>
+        </div>
+
+        <!-- Gone Bigmode - Bigmode Game Jam 2023 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/gonebigmode-bmgj23.html" data-title="Gone Bigmode - Bigmode Game Jam 2023">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Gone Bigmode - Bigmode Game Jam 2023</div>
+            <p class="text-gray-300">Participating in the first Bigmode Game Jam allowed us to give Abomination new and terrifying abilities in Gone Bigmode!</p>
+            <a href="../devlog/gonebigmode-bmgj23.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Dec 15, 2023</span>
+          </div>
+        </div>
+
+        <!-- Unstarted, Untitled Dating Sim Game - Global Game Jam 2024 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/dating-sim-ggj24.html" data-title="Unstarted, Untitled Dating Sim Game - Global Game Jam 2024">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Unstarted, Untitled Dating Sim Game - Global Game Jam 2024</div>
+            <p class="text-gray-300">How severe burnout led to none of us having the energy to do more than ideate a dating sim idea for Global Game Jam 2024.</p>
+            <a href="../devlog/dating-sim-ggj24.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jan 28, 2024</span>
+          </div>
+        </div>
+
+        <!-- Orbituary Celebrates Asteroid AND Meteor Day! -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/orbituary-asteroid-meteor-day.html" data-title="Orbituary Celebrates Asteroid AND Meteor Day!">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Orbituary Celebrates Asteroid AND Meteor Day!</div>
+            <p class="text-gray-300">Asteroid Day and Meteor Day Watch Day landed on the same day, so our ruthless space cat had to celebrate!</p>
+            <a href="../devlog/orbituary-asteroid-meteor-day.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Oct 1, 2024</span>
+          </div>
+        </div>
+
+        <!-- Bubble Bee Battle - Global Game Jam 2025 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/bubblebee-ggj25.html" data-title="Bubble Bee Battle - Global Game Jam 2025">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Bubble Bee Battle - Global Game Jam 2025</div>
+            <p class="text-gray-300">Bismuth Bee builds Bubble Bee Battle for Blobal Bame Bam 2025!</p>
+            <a href="../devlog/bubblebee-ggj25.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Jan 26, 2025</span>
+          </div>
+        </div>
+
+        <!-- Not a Drill - Bigmode Game Jam 2025 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/notadrill-bmgj25.html" data-title="Not a Drill - Bigmode Game Jam 2025">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Not a Drill - Bigmode Game Jam 2025</div>
+            <p class="text-gray-300">The sad tale of time zones and upload failure during Bigmode Game Jam 2025.</p>
+            <a href="../devlog/notadrill-bmgj25.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Feb 9, 2025</span>
+          </div>
+        </div>
+
+        <!-- Bismuth Bee Media Website Goes Dark -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/bbm-goes-dark.html" data-title="Bismuth Bee Media Website Goes Dark">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Bismuth Bee Media Website Goes Dark</div>
+            <p class="text-gray-300">In an effort to rebrand as Bismuth Bee Games, Bismuth Bee Media’s website gets shut down while the new site gets built from scratch.</p>
+            <a href="../devlog/bbm-goes-dark.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">May 17, 2025</span>
+          </div>
+        </div>
+
+        <!-- Maskotism + Trailer - Global/Bigmode Game Jam 2026 -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/maskotism-ggj26.html" data-title="Maskotism + Trailer - Global/Bigmode Game Jam 2026">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Maskotism + Trailer - Global/Bigmode Game Jam 2026</div>
+            <p class="text-gray-300">Joshua Graham partners with Roe Rocket to collaborate on developing Maskotism for Global Game Jam's 2026 theme: "Mask”</p>
+            <a href="../devlog/maskotism-ggj26.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Feb 7, 2026</span>
+          </div>
+        </div>
+
+        <!-- Health Crisis Hiatus -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/health-crisis.html" data-title="Health Crisis Hiatus">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Health Crisis Hiatus</div>
+            <p class="text-gray-300">The story of Joshua Graham's sudden onset chronic health issues, his battle to get doctors to help, and how it has affected development delays.</p>
+            <a href="../devlog/health-crisis.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Aug 18, 2026</span>
+          </div>
+        </div>
+
+        <!-- Developing Bismuth Bee Games Website -->
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img cd-picture" data-lightbox-group="timeline" data-link="../devlog/bbg-custom-website.html" data-title="Developing Bismuth Bee Games Website">
+            <img src="../" alt="Image">
+          </div>
+          <div class="cd-timeline-content">
+            <div class="font-medium text-xl text-violet-400 mb-3">Developing Bismuth Bee Games Website</div>
+            <p class="text-gray-300">A long overdue, custom designed website for Bismuth Bee Games is finally here!</p>
+            <a href="../devlog/bbg-custom-website.html" class="cd-read-more">Read more</a>
+            <span class="cd-date">Aug 20, 2026</span>
+          </div>
+        </div>
+
+        <!-- LIGHTBOX OVERLAY -->
+        <div id="lightbox" class="lightbox-overlay">
+          <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <button class="carousel-btn carousel-prev lightbox-nav" id="lightbox-prev" aria-label="Previous image"></button>
+            <button class="carousel-btn carousel-next lightbox-nav" id="lightbox-next" aria-label="Next image"></button>
+            <img id="lightbox-img" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+          </div>
+        </div>
+      </section>
+
+      </main>
+
+      <!--
+    
+      FOOTER
+    
+      -->
+      <footer class="bg-gray-900/80 backdrop-blur-lg border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8">
+          <div class="site-footer__inner">
+            <div class="site-footer__top">
+              <div class="site-footer__brand">
+                <a href="../index.html"><img src="../img/logo/Bee_Logo1k.PNG" alt="Bismuth Bee Games logo" class="footer-logo"></a>
+              </div>
+
+              <div class="site-footer__nav">
+                <a href="../index.html"><button class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Home</button></a>
+                <a href="../devlog/index.html"><button class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Devlog</button></a>
+                <a href="../games/index.html"><button class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Games</button></a>
+                <a href="timeline.html"><button class="nav-link text-violet-400 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">Timeline</button></a>
+                <a href="index.html"><button class="nav-link text-gray-300 hover:text-yellow-400 px-4 py-2 rounded-md transition-colors duration-200">About</button></a>
+              </div>
+
+              <!-- FOOTER SOCIAL ICONS -->
+              <div class="site-footer__social">
+                <div class="flex items-center gap-3">
+
+                  <!-- ITCH.IO -->
+                  <a href="https://bismuth-bee-games.itch.io/" class="social-icon w-8 h-8 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="235.452" width="261.728" viewBox="0 0 245.37069 220.73612"><path fill="currentColor" d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z" /></svg></a>
+
+                  <!-- TWITTER -->
+                  <a href="https://x.com/bismuthbee" class="social-icon w-8 h-8 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="Twitter-X--Streamline-Bootstrap" height="16" width="16"><path fill="currentColor" d="M12.6 0.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867 -5.07 -4.425 5.07H0.316l5.733 -6.57L0 0.75h5.063l3.495 4.633L12.601 0.75Zm-0.86 13.028h1.36L4.323 2.145H2.865z" stroke-width="1"></path></svg></a>
+
+                  <!-- INSTAGRAM -->
+                  <a href="https://www.instagram.com/bismuthbeegames/" class="social-icon w-8 h-8 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" /></svg></a>
+
+                  <!-- THREADS -->
+                  <a href="https://www.threads.com/@bismuthbeegames" class="social-icon w-8 h-8 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161" /></svg></a>
+
+                  <!-- FACEBOOK -->
+                  <a href="https://www.facebook.com/BismuthBeeMedia/" class="social-icon w-8 h-8 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" /></svg></a>
+
+                  <!-- YOUTUBE -->
+                  <a href="https://www.youtube.com/@BismuthBeeMedia" class="social-icon w-8 h-8 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" /></svg></a>
+
+                  <!-- SQUARESPACE BIO SITE -->
+                  <a href="https://www.bio.site/BismuthBeeGames" class="social-icon w-10 h-10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="4000px" height="4000px" viewBox="0 0 4000 4000" preserveAspectRatio="xMidYMid meet"><path fill="currentColor" d="M1965.63 3741.41 c-19.53 -10.16 -119.14 -87.89 -187.11 -145.70 -47.27 -41.02 -77.34 -72.66 -74.61 -79.69 1.95 -6.25 62.11 -55.08 96.88 -78.52 86.72 -58.59 162.11 -81.25 237.89 -71.09 80.47 10.94 161.33 47.27 241.41 108.20 l16.41 12.50 -12.50 20.31 c-23.83 37.11 -72.66 82.03 -199.22 181.64 -58.20 45.70 -82.42 60.94 -95.31 60.94 -3.91 0 -14.45 -3.91 -23.83 -8.59z"/><path fill="currentColor" d="M1602.34 3273.44 l-20.70 -78.13 31.64 -34.77 c66.02 -71.88 165.23 -155.47 223.83 -187.89 57.42 -31.64 120.31 -50.78 168.75 -50.78 73.44 0 164.45 33.98 251.95 94.14 33.98 23.05 111.72 88.28 137.50 115.23 l14.45 15.23 -22.66 85.94 c-12.50 47.27 -24.22 85.94 -26.17 85.94 -1.95 0 -16.80 -8.59 -32.81 -19.53 -70.31 -46.09 -160.94 -83.59 -236.33 -97.66 -69.14 -12.89 -162.89 -7.03 -228.52 14.06 -63.28 20.70 -160.94 75.39 -215.23 121.09 -10.16 8.59 -19.92 15.23 -21.88 15.23 -1.56 0 -12.50 -35.16 -23.83 -78.13z"/><path fill="currentColor" d="M564.45 3146.48 c-11.33 -10.94 -11.72 -11.72 -3.91 -33.59 7.81 -22.27 30.08 -57.81 100.78 -161.72 81.25 -119.14 78.91 -116.41 112.89 -126.95 87.11 -26.56 178.91 -94.92 257.03 -192.19 56.25 -69.92 171.48 -235.55 239.06 -344.53 17.19 -27.73 59.77 -101.56 94.53 -164.06 73.44 -131.64 117.58 -203.52 165.23 -268.75 l33.98 -46.48 8.59 14.45 c12.50 20.70 9.38 33.59 -39.45 148.05 -13.67 32.42 -41.80 100.78 -62.11 152.34 -20.31 51.56 -50 123.83 -66.02 160.16 -16.02 36.72 -47.66 114.84 -71.09 173.83 -23.05 58.98 -53.13 135.55 -67.19 169.92 -37.11 91.41 -161.33 337.11 -191.02 377.34 -52.34 71.48 -132.81 104.30 -292.97 120.70 -96.88 9.77 -125.78 14.06 -167.58 23.83 -39.45 9.38 -39.45 9.38 -50.78 -2.34z"/><path fill="currentColor" d="M3359.38 3148.44 c-30.86 -8.20 -80.08 -15.23 -177.73 -25.39 -129.69 -13.67 -203.52 -40.23 -255.47 -91.02 -26.95 -26.56 -35.55 -41.02 -110.55 -185.55 -78.91 -152.34 -80.08 -155.08 -180.86 -410.94 -13.67 -34.38 -42.58 -104.69 -64.45 -156.25 -21.88 -51.56 -51.95 -124.61 -66.41 -162.11 -14.45 -37.50 -42.58 -106.64 -61.72 -153.13 -19.53 -46.48 -38.28 -94.53 -41.02 -106.25 -5.47 -20.70 -5.47 -21.88 3.91 -35.55 l9.77 -14.45 29.69 40.63 c58.98 80.08 86.33 124.61 178.52 289.84 72.27 130.08 169.53 283.59 259.38 408.59 115.23 160.94 213.28 246.09 321.48 278.91 27.34 8.59 29.30 9.77 51.17 37.89 28.52 36.33 139.06 201.56 155.08 231.64 26.17 50 8.59 68.36 -50.78 53.13z"/><path fill="currentColor" d="M1523.83 2950.39 c-4.69 -25.39 -10.94 -63.67 -13.67 -85.16 l-5.47 -38.67 23.83 -25.78 c162.89 -174.61 260.55 -251.56 364.06 -285.94 23.44 -7.81 35.16 -8.98 83.98 -8.98 61.33 0 78.91 3.13 135.94 25.39 42.19 16.41 108.20 56.25 159.38 96.88 23.44 18.36 78.52 69.53 122.27 113.28 l79.30 79.69 -2.73 28.13 c-1.56 15.23 -5.47 44.92 -8.98 65.63 l-6.64 37.89 -39.06 -31.25 c-108.98 -87.50 -216.41 -141.41 -322.27 -161.72 -50.39 -9.38 -136.72 -8.59 -185.55 2.34 -108.59 23.44 -213.28 85.55 -340.23 201.56 l-35.94 32.42 -8.20 -45.70z"/><path fill="currentColor" d="M102.73 2883.98 c-8.59 -3.13 -5.47 -15.63 18.75 -72.27 32.42 -76.17 42.97 -95.31 73.83 -132.42 48.83 -58.98 118.75 -118.75 287.11 -245.70 49.61 -37.11 110.16 -83.98 134.77 -103.52 69.14 -54.69 224.61 -174.22 304.69 -234.38 201.95 -151.56 395.31 -303.52 492.58 -387.11 38.28 -33.20 71.48 -56.25 80.08 -56.25 2.34 0 7.81 13.67 12.89 30.47 4.69 16.41 16.41 46.48 25.78 66.02 l17.19 36.33 -30.86 40.63 c-59.77 79.30 -102.34 148.44 -181.64 293.36 -65.63 119.92 -128.52 219.53 -235.55 373.05 -128.52 183.98 -206.25 259.38 -313.67 302.34 -55.47 22.66 -103.91 30.08 -316.02 49.22 -167.97 15.23 -193.36 17.97 -261.33 31.64 -51.17 10.16 -96.09 14.06 -108.59 8.59z"/><path fill="currentColor" d="M3773.44 2876.95 c-66.41 -14.06 -112.50 -19.92 -263.67 -33.20 -226.56 -19.92 -282.03 -30.08 -352.34 -64.45 -67.19 -32.81 -138.28 -95.31 -202.73 -178.13 -99.61 -127.34 -241.80 -344.92 -317.97 -485.94 -65.23 -120.70 -125.39 -218.36 -177.73 -287.11 -16.02 -21.09 -29.30 -40.23 -29.30 -42.19 0 -1.95 7.03 -18.36 15.23 -36.33 8.59 -17.97 19.14 -46.09 23.83 -62.11 4.69 -16.02 8.98 -31.64 10.16 -34.38 2.73 -8.59 30.08 8.59 80.08 51.17 104.30 87.89 304.69 245.70 503.13 396.48 80.86 61.33 186.33 142.58 234.77 180.47 48.44 37.89 135.55 104.69 193.36 148.44 149.61 112.50 192.19 147.27 250.39 205.08 58.59 58.20 76.56 84.77 109.38 160.55 33.20 76.56 34.38 80.47 26.17 86.33 -10.16 7.81 -52.73 5.47 -102.73 -4.69z"/><path fill="currentColor" d="M1505.47 2556.64 c1.56 -12.89 7.42 -43.36 12.50 -67.97 22.66 -101.56 49.61 -157.81 99.22 -207.81 66.02 -66.02 160.55 -117.58 311.72 -169.92 l59.77 -20.70 63.28 21.88 c153.91 52.73 248.83 105.08 316.41 174.22 33.98 34.77 62.89 92.19 82.42 162.89 12.11 45.31 27.73 124.22 25 126.95 -0.78 0.78 -18.75 -14.45 -40.23 -33.98 -207.03 -186.33 -414.45 -250.39 -605.08 -186.33 -95.70 32.03 -195.31 97.27 -294.92 192.58 l-32.42 31.64 2.34 -23.44z"/><path fill="currentColor" d="M1900.39 2035.16 c-73.44 -13.28 -108.20 -28.52 -166.02 -71.88 -105.86 -79.30 -194.14 -219.14 -215.23 -340.63 -6.25 -36.72 -2.34 -116.80 7.81 -155.86 19.14 -73.83 70.70 -153.52 154.30 -238.28 41.80 -42.97 51.17 -50 80.47 -64.06 18.36 -8.98 51.17 -20.70 73.05 -26.17 39.84 -9.77 40.63 -9.77 76.17 -3.91 44.92 7.81 112.50 7.81 155.47 0.39 46.88 -8.20 62.11 -7.42 98.05 5.86 50.78 18.36 80.08 37.11 122.27 77.73 91.41 89.06 144.92 172.66 167.58 262.11 12.11 49.61 11.33 125.39 -1.95 175.78 -28.52 106.25 -103.13 223.05 -185.16 289.06 -88.28 71.09 -148.44 92.58 -267.19 96.09 -44.92 1.17 -65.63 0 -99.61 -6.25z"/><path fill="currentColor" d="M1692.58 1115.63 c-49.22 -12.11 -89.45 -41.41 -110.55 -81.25 -12.11 -21.88 -13.67 -28.52 -14.84 -62.50 -1.56 -32.03 0 -42.97 8.59 -73.44 17.97 -62.11 41.02 -99.61 103.13 -166.80 67.19 -73.05 139.84 -121.48 213.67 -142.58 27.34 -7.81 39.84 -8.98 97.66 -8.59 60.55 0 69.53 1.17 100.78 10.55 71.88 22.27 129.69 60.16 196.88 128.91 73.05 75 101.95 121.88 118.75 192.97 15.23 63.67 4.69 112.11 -33.20 152.73 -31.25 33.59 -84.77 55.47 -134.77 55.47 -22.66 0 -26.17 -1.17 -53.91 -19.92 -61.33 -41.41 -108.59 -57.42 -180.47 -60.55 -78.52 -3.52 -140.23 13.28 -206.64 57.03 -33.98 22.66 -36.33 23.44 -60.16 23.05 -13.67 0 -33.59 -2.34 -44.92 -5.08z"/><path fill="currentColor" d="M1714.84 583.59 c-94.14 -59.77 -110.94 -76.17 -116.80 -113.67 -3.91 -26.56 0.39 -49.22 23.05 -120.31 25 -79.30 31.25 -95.70 36.33 -95.70 7.42 0 -1.17 43.75 -17.19 85.55 -27.73 72.66 -34.77 94.92 -34.77 112.50 0 38.28 16.02 55.86 108.20 118.36 34.77 23.83 63.67 44.14 63.67 45.31 0 5.86 -16.02 -2.34 -62.50 -32.03z"/><path fill="currentColor" d="M2199.22 615.23 c0 -1.17 23.05 -17.19 50.78 -35.55 73.44 -48.05 106.64 -75.39 116.80 -96.09 13.67 -28.13 10.55 -44.92 -20.70 -123.44 -14.45 -35.94 -29.69 -88.28 -29.69 -101.95 0 -8.98 7.03 -3.52 13.28 10.55 15.63 34.77 50 152.73 51.95 176.95 3.91 50 -15.23 72.66 -114.45 135.16 -51.95 32.42 -67.97 40.63 -67.97 34.38z"/></svg></a>
+
+                  <!-- ARTSTATION 
+                  <a href="https://www.artstation.com/ninjaninjosh" class="social-icon w-8 h-8 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32"><path fill="currentColor" d="M0 23.63l2.703 4.672c0.552 1.094 1.667 1.781 2.885 1.781h17.943l-3.724-6.453zM32 23.661c0-0.641-0.193-1.245-0.516-1.75l-10.516-18.276c-0.557-1.057-1.656-1.719-2.854-1.719h-5.557l16.24 28.135 2.563-4.432c0.5-0.849 0.641-1.224 0.641-1.958zM17.161 19.047l-7.255-12.568-7.26 12.568z"></path></svg></a>
+                  -->
+
+                  <!-- SKETCHFAB
+                  <a href="https://sketchfab.com/NinjaNinJosh" class="social-icon w-8 h-8 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 13 13"><path fill="currentColor" d="m 7.7215115,7.835445 4.3544155,-2.303813 0,4.987339 L 7.7468165,13 7.7215165,7.784809 M 1.9240383,5.531658 6.2531745,7.886082 6.2278445,13 1.8987349,10.518997 1.9240399,5.556964 M 6.9873475,1 1.8987345,3.936711 6.9873475,6.670899 12.101266,3.936711 6.9873475,1"></path></svg></a>
+                  -->
+                  <!-- CONTRACTOR PORTFOLIO -->
+
+                </div>
+              </div>
+            </div>
+            <div class="site-footer__bottom">
+              <div class="site-footer__copyright">
+                © 2025 Bismuth Bee Games. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="../script.js"></script>
     </div>
-    </body>
-    </html>
+  </body>
+</html>
