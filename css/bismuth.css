@@ -1037,7 +1037,9 @@ TEAM HEX GRID
   grid-template-columns: repeat(var(--n), var(--u));
   justify-content: center;
   margin: calc(0.5 * var(--u)) 0;
-  container-type: inline-size;
+  container-type:
+  width: auto;
+  max-width: 100%;
 }
 
 .team-hex-item {
