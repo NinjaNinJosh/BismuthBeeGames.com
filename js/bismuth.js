@@ -56,6 +56,17 @@ class Carousel {
   update() {
     if (this.type === 'slides') {
       this.slides.forEach((slide, i) => {
+        const iframe = slide.querySelector('iframe');
+        if (iframe) {
+          const isActive = slide === this.slides[this.currentIndex];
+          if (!isActive) {
+          iframe.contentWindow?.postMessage(
+            '{"event":"command","func":"pauseVideo","args":""}',
+            '*'
+          );
+        }
+      }
+
         if (i === this.currentIndex) slide.setAttribute('data-active', '');
         else slide.removeAttribute('data-active');
       });
