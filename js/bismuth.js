@@ -346,3 +346,25 @@ document.querySelectorAll('.carousel-btn').forEach(btn => {
   // ===== INIT TIMELINE =====
   initTimeline();
 });
+
+function initTeamHexGrid() {
+  const gallery = document.getElementById('team-hex-gallery');
+  if (!gallery) return;
+
+  const containerWidth = gallery.clientWidth;          // actual width
+  const hexWidth = 6 * 16;                             // --u: 6rem = 96px
+  const gap = 0.6 * 16;                                // --s: 0.6rem = 9.6px
+  const totalCols = Math.floor((containerWidth + gap) / (hexWidth + gap));
+  const n = Math.max(2, totalCols);                   // minimum 2 columns
+  gallery.style.setProperty('--n', n);
+}
+
+// Run on load
+document.addEventListener('DOMContentLoaded', initTeamHexGrid);
+
+// Recalculate on resize (debounced)
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(initTeamHexGrid, 100);
+});
